@@ -1,4 +1,4 @@
--- ChromeVerticalTabSidebarToggle
+-- Chrome-Vertical-Tab-Sidebar-Toggle
 -- Hammerspoon script to toggle Chrome's native vertical tab sidebar
 -- via keyboard shortcut (Cmd+S) and/or mouse left-edge hover.
 -- Uses macOS Accessibility API to find and press the sidebar button.
@@ -378,7 +378,7 @@ hs.hotkey.bind({"cmd", "alt"}, "D", function()
     local schemeName = ({ "Keyboard Only", "Mouse Edge Only", "Keyboard + Mouse" })[SCHEME]
 
     local status = string.format(
-        "ChromeVerticalTabSidebarToggle:\n" ..
+        "Chrome-Vertical-Tab-Sidebar-Toggle:\n" ..
         "Scheme: %s (%d)\n" ..
         "App: %s\n" ..
         "KeyTap: %s\n" ..
@@ -453,4 +453,4 @@ hs.hotkey.bind({"cmd", "alt"}, "R", function()
     restartServices()
 end)
 
-log("ChromeVerticalTabSidebarToggle loaded (scheme " .. SCHEME .. ")")
+log("Chrome-Vertical-Tab-Sidebar-Toggle loaded (scheme " .. SCHEME .. ")")

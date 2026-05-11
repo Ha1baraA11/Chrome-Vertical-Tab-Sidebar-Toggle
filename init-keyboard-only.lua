@@ -1,4 +1,4 @@
--- ChromeVerticalTabSidebarToggle (Keyboard Only)
+-- Chrome-Vertical-Tab-Sidebar-Toggle (Keyboard Only)
 -- Hammerspoon script to toggle Chrome's native vertical tab sidebar
 -- via keyboard shortcut only (Cmd+S).
 -- Uses macOS Accessibility API to find and press the sidebar button.
@@ -250,7 +250,7 @@ hs.hotkey.bind({"cmd", "alt"}, "D", function()
     local keyTapRunning = keyTap and keyTap:isEnabled()
 
     local status = string.format(
-        "ChromeVerticalTabSidebarToggle (Keyboard Only):\n" ..
+        "Chrome-Vertical-Tab-Sidebar-Toggle (Keyboard Only):\n" ..
         "App: %s\n" ..
         "KeyTap: %s\n" ..
         "Events: %d\n" ..
@@ -319,4 +319,4 @@ hs.hotkey.bind({"cmd", "alt"}, "R", function()
     restartKeyTap()
 end)
 
-log("ChromeVerticalTabSidebarToggle (Keyboard Only) loaded")
+log("Chrome-Vertical-Tab-Sidebar-Toggle (Keyboard Only) loaded")
