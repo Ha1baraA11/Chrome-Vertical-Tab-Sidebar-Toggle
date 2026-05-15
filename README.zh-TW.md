@@ -1,8 +1,19 @@
-# Chrome-Vertical-Tab-Sidebar-Toggle
+<p align="center">
+  <img src="assets/logo.png" alt="Chrome-Vertical-Tab-Sidebar-Toggle Logo" width="200">
+</p>
 
-[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
+<h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
-一個 [Hammerspoon](https://www.hammerspoon.org) 腳本，透過 macOS 無障礙 API 切換 Chrome 原生垂直標籤欄側邊欄。
+<p align="center">
+  <strong>透過 macOS 無障礙 API 切換 Chrome 原生垂直標籤欄側邊欄的 Hammerspoon 腳本</strong><br>
+  鍵盤快捷鍵、滑鼠邊緣觸發，或兩者兼用，隨你選擇。
+</p>
+
+<p align="center">
+  <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a>
+</p>
+
+---
 
 ## 功能介紹
 

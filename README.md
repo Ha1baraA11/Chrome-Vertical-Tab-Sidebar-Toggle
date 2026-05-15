@@ -1,8 +1,19 @@
-# Chrome-Vertical-Tab-Sidebar-Toggle
+<p align="center">
+  <img src="assets/logo.png" alt="Chrome-Vertical-Tab-Sidebar-Toggle Logo" width="200">
+</p>
 
-[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
+<h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
-A [Hammerspoon](https://www.hammerspoon.org) script that toggles Chrome's native vertical tab sidebar using the macOS Accessibility API.
+<p align="center">
+  <strong>A Hammerspoon script that toggles Chrome's native vertical tab sidebar via the macOS Accessibility API</strong><br>
+  Keyboard shortcut, mouse edge trigger, or both — your choice.
+</p>
+
+<p align="center">
+  <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.zh-TW.md">繁體中文</a>
+</p>
+
+---
 
 ## What it does
 
