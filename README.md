@@ -24,6 +24,10 @@ Chrome has a built-in vertical tab sidebar, but no keyboard shortcut to toggle i
 
 It works by traversing Chrome's Accessibility tree (`AXUIElement`) to find the "Expand Tabs" / "Collapse Tabs" button and pressing it via `AXPress`. Same approach as [ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast).
 
+## Demo
+
+https://github.com/user-attachments/assets/demo.mov
+
 ## Requirements
 
 - macOS 13+
