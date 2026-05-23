@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - Google Chrome 已啟用垂直標籤欄側邊欄
 - Hammerspoon 已取得輔助使用權限
 
+## 在 Chrome 中開啟垂直標籤欄側邊欄
+
+垂直標籤欄側邊欄預設未開啟，需要手動啟用：
+
+1. 在網址列輸入 `chrome://flags/#vertical-tabs`
+2. 將 **Vertical tabs** 改為 **Enabled**
+3. 點擊 **Relaunch** 重啟瀏覽器
+4. 重啟後，右鍵標籤欄頂部空白處即可看到選項
+
 ## 安裝步驟
 
 1. 安裝 Hammerspoon：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - 新增並啟用 Hammerspoon
 
 4. 重新載入 Hammerspoon 設定（點選選單列圖示 → 重新載入設定）
+
+5. （選用）將 Hammerspoon 加入登入項目，開機自動啟動：
+   - 系統設定 → 一般 → 登入項目
+   - 新增 Hammerspoon
 
 ## 方案選擇（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- 是否輸出偵錯資訊到控制台
 
 ## 自訂快捷鍵
 
-`init.lua` 和 `init-keyboard-only.lua` 均支援自訂快捷鍵。預設快捷鍵為 `Cmd+S`。如需修改，編輯 `createKeyTap` 函式內的按鍵判斷：
+`init.lua` 和 `init-keyboard-only.lua` 均支援自訂快捷鍵。預設快捷鍵為 `Cmd+S`，會覆蓋 Chrome 原生的「儲存網頁」快捷鍵。如需修改，編輯 `createKeyTap` 函式內的按鍵判斷：
 
 ```lua
 -- Cmd+S -> toggle sidebar

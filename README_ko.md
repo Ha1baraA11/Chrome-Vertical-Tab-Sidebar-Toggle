@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - 수직 탭 사이드바가 활성화된 Google Chrome
 - Hammerspoon에 접근성 권한이 부여되어 있어야 함
 
+## Chrome에서 수직 탭 사이드바 활성화하기
+
+수직 탭 사이드바는 기본적으로 비활성화되어 있습니다. 활성화하려면：
+
+1. 주소창에 `chrome://flags/#vertical-tabs` 입력
+2. **Vertical tabs**를 **Enabled**로 변경
+3. **Relaunch**를 클릭하여 Chrome 재시작
+4. 재시작 후 탭 표시줄의 빈 공간을 우클릭하면 옵션을 볼 수 있습니다
+
 ## 설치
 
 1. Hammerspoon 설치：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Hammerspoon 추가 및 활성화
 
 4. Hammerspoon 설정 다시 로드（메뉴 표시줄 아이콘 → 설정 다시 로드）
+
+5. （선택）Hammerspoon을 로그인 항목에 추가하여 자동 시작 설정：
+   - 시스템 설정 → 일반 → 로그인 항목
+   - Hammerspoon 추가
 
 ## 스킴（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- 콘솔에 디버그 메시지 출력
 
 ## 키보드 단축키 사용자 정의
 
-`init.lua`와 `init-keyboard-only.lua` 모두에서 사용 가능합니다. 기본 단축키는 `Cmd+S`입니다. 변경하려면 `createKeyTap` 함수 내의 키 검사를 편집하세요：
+`init.lua`와 `init-keyboard-only.lua` 모두에서 사용 가능합니다. 기본 단축키는 `Cmd+S`이며, Chrome의 "페이지 저장" 단축키를 덮어씁니다. 변경하려면 `createKeyTap` 함수 내의 키 검사를 편집하세요：
 
 ```lua
 -- Cmd+S -> toggle sidebar

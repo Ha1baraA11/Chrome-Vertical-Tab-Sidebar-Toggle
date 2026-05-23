@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - Google Chrome mit aktivierter vertikaler Tab-Seitenleiste
 - Hammerspoon hat Berechtigung für Bedienungshilfen erhalten
 
+## Vertikale Tab-Seitenleiste in Chrome aktivieren
+
+Die vertikale Tab-Seitenleiste ist standardmäßig deaktiviert. Um sie zu aktivieren：
+
+1. Geben Sie `chrome://flags/#vertical-tabs` in die Adressleiste ein
+2. Ändern Sie **Vertical tabs** auf **Enabled**
+3. Klicken Sie auf **Relaunch**, um Chrome neu zu starten
+4. Nach dem Neustart klicken Sie mit der rechten Maustaste auf einen leeren Bereich der Tableiste, um die Option zu sehen
+
 ## Installation
 
 1. Hammerspoon installieren：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Hammerspoon hinzufügen und aktivieren
 
 4. Hammerspoon-Konfiguration neu laden（Klicken Sie auf das Menüleisten-Symbol → Konfiguration neu laden）
+
+5. （Optional）Hammerspoon zu den Login-Objekten hinzufügen, damit es automatisch startet：
+   - Systemeinstellungen → Allgemein → Login-Objekte
+   - Hammerspoon hinzufügen
 
 ## Schemata（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- Debug-Meldungen in die Konsole ausgeben
 
 ## Tastenkürzel anpassen
 
-Verfügbar in `init.lua` und `init-keyboard-only.lua`. Das Standard-Tastenkürzel ist `Cmd+S`. Um es zu ändern, bearbeiten Sie die Tastenprüfung in der Funktion `createKeyTap`：
+Verfügbar in `init.lua` und `init-keyboard-only.lua`. Das Standard-Tastenkürzel ist `Cmd+S`, das Chromes natives Tastenkürzel zum „Seite speichern" überschreibt. Um es zu ändern, bearbeiten Sie die Tastenprüfung in der Funktion `createKeyTap`：
 
 ```lua
 -- Cmd+S -> toggle sidebar

@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - Google Chrome com a barra lateral de abas verticais habilitada
 - Permissão de acessibilidade concedida ao Hammerspoon
 
+## Ativar a barra lateral de abas verticais no Chrome
+
+A barra lateral de abas verticais não está ativada por padrão. Para ativar：
+
+1. Digite `chrome://flags/#vertical-tabs` na barra de endereços
+2. Altere **Vertical tabs** para **Enabled**
+3. Clique em **Relaunch** para reiniciar o Chrome
+4. Após reiniciar, clique com o botão direito em uma área vazia da barra de abas para ver a opção
+
 ## Instalação
 
 1. Instalar o Hammerspoon：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Adicionar e habilitar o Hammerspoon
 
 4. Recarregar a configuração do Hammerspoon（clique no ícone da barra de menu → Recarregar Configuração）
+
+5. （Opcional）Adicionar o Hammerspoon aos itens de login para iniciar automaticamente：
+   - Ajustes do Sistema → Geral → Itens de Login
+   - Adicionar Hammerspoon
 
 ## Esquemas（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- imprimir mensagens de depuração no console
 
 ## Personalizar o atalho de teclado
 
-Disponível em `init.lua` e `init-keyboard-only.lua`. O atalho padrão é `Cmd+S`. Para alterar, edite a verificação de tecla na função `createKeyTap`：
+Disponível em `init.lua` e `init-keyboard-only.lua`. O atalho padrão é `Cmd+S`, que sobrescreve o atalho nativo do Chrome para "Salvar página". Para alterar, edite a verificação de tecla na função `createKeyTap`：
 
 ```lua
 -- Cmd+S -> toggle sidebar

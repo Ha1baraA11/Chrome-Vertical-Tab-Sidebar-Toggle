@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - Google Chrome avec la barre latérale d'onglets verticaux activée
 - Autorisation d'accessibilité accordée à Hammerspoon
 
+## Activer la barre latérale d'onglets verticaux dans Chrome
+
+La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'activer：
+
+1. Tapez `chrome://flags/#vertical-tabs` dans la barre d'adresse
+2. Changez **Vertical tabs** en **Enabled**
+3. Cliquez sur **Relaunch** pour redémarrer Chrome
+4. Après le redémarrage, faites clic droit sur une zone vide de la barre d'onglets pour voir l'option
+
 ## Installation
 
 1. Installer Hammerspoon：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Ajouter et activer Hammerspoon
 
 4. Recharger la configuration Hammerspoon（cliquez sur l'icône de la barre de menus → Recharger la configuration）
+
+5. （Facultatif）Ajouter Hammerspoon aux éléments de connexion pour un démarrage automatique：
+   - Réglages du Système → Général → Éléments de connexion
+   - Ajouter Hammerspoon
 
 ## Schémas（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- afficher les messages de débogage dans la console
 
 ## Personnaliser le raccourci clavier
 
-Disponible dans `init.lua` et `init-keyboard-only.lua`. Le raccourci par défaut est `Cmd+S`. Pour le modifier, éditez la vérification de touche dans la fonction `createKeyTap`：
+Disponible dans `init.lua` et `init-keyboard-only.lua`. Le raccourci par défaut est `Cmd+S`, qui remplace le raccourci natif de Chrome pour « Enregistrer la page ». Pour le modifier, éditez la vérification de touche dans la fonction `createKeyTap`：
 
 ```lua
 -- Cmd+S -> toggle sidebar

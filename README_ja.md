@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - 垂直タブサイドバーが有効な Google Chrome
 - Hammerspoon にアクセシビリティ権限が付与されていること
 
+## Chrome で垂直タブサイドバーを有効にする
+
+垂直タブサイドバーはデフォルトで無効になっています。有効にするには：
+
+1. アドレスバーに `chrome://flags/#vertical-tabs` と入力
+2. **Vertical tabs** を **Enabled** に変更
+3. **Relaunch** をクリックして Chrome を再起動
+4. 再起動後、タブバーの空白部分を右クリックするとオプションが表示されます
+
 ## インストール
 
 1. Hammerspoon をインストール：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Hammerspoon を追加して有効にする
 
 4. Hammerspoon 設定をリロード（メニューバーのアイコン → 設定をリロード）
+
+5. （オプション）Hammerspoon をログインアイテムに追加して自動起動を設定：
+   - システム設定 → 一般 → ログインアイテム
+   - Hammerspoon を追加
 
 ## スキーム（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- コンソールにデバッグメッセージを出力
 
 ## キーボードショートカットのカスタマイズ
 
-`init.lua` と `init-keyboard-only.lua` の両方で利用可能です。デフォルトのショートカットは `Cmd+S` です。変更するには、`createKeyTap` 関数内のキー判定を編集してください：
+`init.lua` と `init-keyboard-only.lua` の両方で利用可能です。デフォルトのショートカットは `Cmd+S` で、Chrome の「ページを保存」ショートカットを上書きします。変更するには、`createKeyTap` 関数内のキー判定を編集してください：
 
 ```lua
 -- Cmd+S -> toggle sidebar

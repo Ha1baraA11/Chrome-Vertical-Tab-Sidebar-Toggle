@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - Google Chrome with vertical tab sidebar enabled
 - Accessibility permission granted to Hammerspoon
 
+## Enable vertical tab sidebar in Chrome
+
+The vertical tab sidebar is not enabled by default. To turn it on:
+
+1. Type `chrome://flags/#vertical-tabs` in the address bar
+2. Set **Vertical tabs** to **Enabled**
+3. Click **Relaunch** to restart Chrome
+4. After restart, right-click an empty area in the tab bar to see the option
+
 ## Installation
 
 1. Install Hammerspoon:
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Add and enable Hammerspoon
 
 4. Reload Hammerspoon config (click menu bar icon → Reload Config)
+
+5. (Optional) Add Hammerspoon to login items so it starts automatically:
+   - System Settings → General → Login Items
+   - Add Hammerspoon
 
 ## Schemes (`init.lua`)
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- print debug messages to Console
 
 ## Customizing the keyboard shortcut
 
-Available in both `init.lua` and `init-keyboard-only.lua`. The default shortcut is `Cmd+S`. To change it, edit the key check in the `createKeyTap` function:
+Available in both `init.lua` and `init-keyboard-only.lua`. The default shortcut is `Cmd+S`, which overrides Chrome's native "Save page" shortcut. To change it, edit the key check in the `createKeyTap` function:
 
 ```lua
 -- Cmd+S -> toggle sidebar

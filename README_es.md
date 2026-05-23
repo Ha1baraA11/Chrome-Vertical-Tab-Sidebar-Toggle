@@ -35,6 +35,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 - Google Chrome con la barra lateral de pestañas verticales habilitada
 - Permiso de accesibilidad otorgado a Hammerspoon
 
+## Activar la barra lateral de pestañas verticales en Chrome
+
+La barra lateral de pestañas verticales no está activada por defecto. Para activarla：
+
+1. Escribe `chrome://flags/#vertical-tabs` en la barra de direcciones
+2. Cambia **Vertical tabs** a **Enabled**
+3. Haz clic en **Relaunch** para reiniciar Chrome
+4. Después de reiniciar, haz clic derecho en un área vacía de la barra de pestañas para ver la opción
+
 ## Instalación
 
 1. Instalar Hammerspoon：
@@ -62,6 +71,10 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - Añadir y habilitar Hammerspoon
 
 4. Recargar la configuración de Hammerspoon（haz clic en el icono de la barra de menú → Recargar Configuración）
+
+5. （Opcional）Añadir Hammerspoon a los elementos de inicio para que se ejecute automáticamente：
+   - Ajustes del Sistema → General → Elementos de inicio
+   - Añadir Hammerspoon
 
 ## Esquemas（`init.lua`）
 
@@ -120,7 +133,7 @@ local DEBUG = true  -- imprimir mensajes de depuración en la consola
 
 ## Personalizar el atajo de teclado
 
-Disponible tanto en `init.lua` como en `init-keyboard-only.lua`. El atajo por defecto es `Cmd+S`. Para cambiarlo, edita la comprobación de tecla en la función `createKeyTap`：
+Disponible tanto en `init.lua` como en `init-keyboard-only.lua`. El atajo por defecto es `Cmd+S`, que sobrescribe el atajo nativo de Chrome para "Guardar página". Para cambiarlo, edita la comprobación de tecla en la función `createKeyTap`：
 
 ```lua
 -- Cmd+S -> toggle sidebar
