@@ -26,7 +26,7 @@ It works by traversing Chrome's Accessibility tree (`AXUIElement`) to find the "
 
 ## Demo
 
-https://github.com/user-attachments/assets/demo.mov
+https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 ## Requirements
 
