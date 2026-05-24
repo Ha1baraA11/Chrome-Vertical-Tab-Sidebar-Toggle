@@ -41,7 +41,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 1. 주소창에 `chrome://flags/#vertical-tabs`를 입력하세요
 2. **Vertical tabs**를 **Enabled**로 변경하세요
-3. **Relaunch**를 클릭하여 Chrome을 재시작하세요
+3. **Relaunch**(다시 시작)를 클릭하여 Chrome을 재시작하세요
 4. 재시작 후 탭 표시줄의 빈 공간을 우클릭하여 옵션을 확인하세요
 
 ## 설치
@@ -52,7 +52,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    brew install --cask hammerspoon
    ```
 
-2. 버전을 선택하고 Hammerspoon 설정에 복사하세요:
+2. 버전을 선택하고 Hammerspoon 설정 디렉터리에 복사하세요:
 
    **스킴 버전** (3가지 모드, 기본값):
    ```bash

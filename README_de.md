@@ -5,7 +5,7 @@
 <h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
 <p align="center">
-  <strong>Ein Hammerspoon-Skript, das Chromes native vertikale Tab-Seitenleiste über die macOS Accessibility API umschaltet</strong><br>
+  <strong>Ein Hammerspoon-Skript, das Chromes native vertikale Tab-Seitenleiste über die macOS-Bedienungshilfen-API umschaltet</strong><br>
   Tastenkürzel, Triggerung durch den Bildschirmrand, oder beides — Sie haben die Wahl.
 </p>
 
@@ -72,8 +72,8 @@ Die vertikale Tab-Seitenleiste ist standardmäßig deaktiviert. Um sie zu aktivi
 
 4. Laden Sie die Hammerspoon-Konfiguration neu (Klicken Sie auf das Menüleisten-Symbol → Konfiguration neu laden)
 
-5. (Optional) Fügen Sie Hammerspoon zu den Login-Objekten hinzu, damit es automatisch startet:
-   - Systemeinstellungen → Allgemein → Login-Objekte
+5. (Optional) Fügen Sie Hammerspoon zu den Anmeldeobjekten hinzu, damit es automatisch startet:
+   - Systemeinstellungen → Allgemein → Anmeldeobjekte
    - Fügen Sie Hammerspoon hinzu
 
 ## Schemata (`init.lua`)

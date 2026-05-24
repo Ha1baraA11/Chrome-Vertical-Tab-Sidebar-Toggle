@@ -5,7 +5,7 @@
 <h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
 <p align="center">
-  <strong>透過 macOS 輔助功能 API 切換 Chrome 原生垂直分頁側邊欄的 Hammerspoon 腳本</strong><br>
+  <strong>透過 macOS 輔助使用 API 切換 Chrome 原生垂直分頁側邊欄的 Hammerspoon 腳本</strong><br>
   鍵盤快速鍵、滑鼠邊緣觸發，或兩者兼用，隨你選擇。
 </p>
 
@@ -67,7 +67,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    如果已有 `~/.hammerspoon/init.lua`，請將內容附加到末尾。
 
 3. 授予輔助使用權限：
-   - 系統設定 → 隱私與安全性 → 輔助使用
+   - 系統設定 → 隱私權與安全性 → 輔助使用
    - 新增並啟用 Hammerspoon
 
 4. 重新載入 Hammerspoon 設定（點選選單列圖示 → 重新載入設定）
@@ -191,7 +191,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 修改後重新載入 Hammerspoon 設定即可生效。
 
-## 工作原理
+## 運作原理
 
 1. 當 Chrome 處於前景運作時，`eventtap` 會攔截 `Cmd+S`（方案 1 和 3）
 2. 滑鼠位置輪詢器（50Hz）偵測左邊緣懸停和離開（方案 2 和 3）

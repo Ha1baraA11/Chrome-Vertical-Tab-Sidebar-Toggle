@@ -17,7 +17,7 @@
 
 ## Fonctionnalités
 
-Chrome dispose d'une barre latérale d'onglets verticaux intégrée, mais aucun raccourci clavier ne permet de l'afficher ou de la masquer. Ce script propose deux versions pour y remédier:
+Chrome dispose d'une barre latérale d'onglets verticaux intégrée, mais aucun raccourci clavier ne permet de l'afficher ou de la masquer. Ce script propose deux versions pour y remédier :
 
 - **`init.lua`** — prend en charge trois schémas sélectionnables (clavier / bord de l'écran / les deux)
 - **`init-keyboard-only.lua`** — raccourci clavier uniquement, sans détection de souris
@@ -54,7 +54,7 @@ La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'ac
 
 2. Choisissez une version et copiez-la dans la configuration Hammerspoon :
 
-   **Version avec schémas**(trois modes, par défaut):
+   **Version avec schémas** (trois modes, par défaut) :
    ```bash
    cp init.lua ~/.hammerspoon/init.lua
    ```
@@ -67,18 +67,18 @@ La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'ac
    Si vous avez déjà un `~/.hammerspoon/init.lua`, ajoutez le contenu à la fin.
 
 3. Accordez l'autorisation d'accessibilité :
-   - Réglages du Système → Confidentialité et sécurité → Accessibilité
+   - Réglages Système → Confidentialité et sécurité → Accessibilité
    - Ajoutez et activez Hammerspoon
 
 4. Rechargez la configuration Hammerspoon (cliquez sur l'icône de la barre de menus → Recharger la configuration)
 
 5. (Facultatif) Ajoutez Hammerspoon aux éléments de connexion pour un démarrage automatique :
-   - Réglages du Système → Général → Éléments de connexion
+   - Réglages Système → Général → Éléments de connexion
    - Ajoutez Hammerspoon
 
 ## Schémas (`init.lua`)
 
-Modifiez la variable `SCHEME` en haut du fichier `init.lua` pour choisir un mode:
+Modifiez la variable `SCHEME` en haut du fichier `init.lua` pour choisir un mode :
 
 | Schéma | Valeur | Déclencheurs |
 |--------|--------|--------------|
@@ -156,7 +156,7 @@ Définissez le flag sur `true` pour l'exiger, `not flags.xxx` pour l'exclure.
 
 ### Code de touche
 
-Changez `keycodes.map["s"]` par n'importe quel nom de touche. Exemples courants:
+Changez `keycodes.map["s"]` par n'importe quel nom de touche. Exemples courants :
 
 ```lua
 keycodes.map["s"]       -- S

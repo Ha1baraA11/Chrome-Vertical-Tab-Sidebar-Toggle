@@ -72,8 +72,8 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 4. Hammerspoon 設定をリロードしてください (メニューバーのアイコン → 「Reload Config」をクリック)
 
-5. (オプション) Hammerspoon をログインアイテムに追加して自動起動を設定してください:
-   - システム設定 → 一般 → ログインアイテム
+5. (オプション) Hammerspoon をログイン項目に追加して自動起動を設定してください:
+   - システム設定 → 一般 → ログイン項目
    - Hammerspoon を追加
 
 ## スキーム (`init.lua`)
