@@ -196,9 +196,9 @@ Después de editar, recarga la configuración de Hammerspoon para aplicar los ca
 1. Un `eventtap` intercepta `Cmd+S` cuando Chrome está en primer plano (esquemas 1 & 3)
 2. Un sondeo de posición del ratón (50Hz) detecta el paso por el borde izquierdo y la salida (esquemas 2 & 3)
 3. Ambos activadores llaman a `toggleSidebar()`, que:
-   - Obtiene el elemento raíz AX de Chrome mediante `hs.axuielement.applicationElement()`
-   - Busca en las ventanas un botón con `AXDescription` que coincida con "Expand Tabs" o "Collapse Tabs"
-   - Llama a `performAction("AXPress")` en el botón encontrado
+   - Obtener el elemento raíz AX de Chrome mediante `hs.axuielement.applicationElement()`
+   - Buscar en las ventanas un botón con `AXDescription` que coincida con "Expand Tabs" o "Collapse Tabs"
+   - Llamar a `performAction("AXPress")` en el botón encontrado
 4. Un temporizador de vigilancia (watchdog) detecta si el sondeo del ratón falla y lo reinicia automáticamente (esquemas 2 & 3)
 5. Períodos de tolerancia previenen activaciones falsas durante el cambio de aplicaciones
 

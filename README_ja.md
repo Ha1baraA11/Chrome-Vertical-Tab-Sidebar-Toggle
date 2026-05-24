@@ -193,7 +193,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 ## 仕組み
 
-1. `eventtap` が Chrome が最前面のときに `Cmd+S` を傍受(スキーム 1 & 3)
+1. Chrome が最前面にあるとき、`eventtap` が `Cmd+S` を傍受 (スキーム 1 & 3)
 2. マウス位置監視タイマー (50Hz) が左端のホバーと退出を検出 (スキーム 2 & 3)
 3. 両方のトリガーが `toggleSidebar()` を呼び出し、以下の処理を実行します:
    - `hs.axuielement.applicationElement()` による Chrome の AX ルート要素の取得
