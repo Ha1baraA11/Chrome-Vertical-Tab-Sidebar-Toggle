@@ -42,7 +42,7 @@ Die vertikale Tab-Seitenleiste ist standardmäßig deaktiviert. Um sie zu aktivi
 1. Geben Sie `chrome://flags/#vertical-tabs` in die Adressleiste ein
 2. Ändern Sie **Vertical tabs** auf **Enabled**
 3. Klicken Sie auf **Relaunch**, um Chrome neu zu starten
-4. Nach dem Neustart klicken Sie mit der rechten Maustaste auf einen leeren Bereich der Tableiste, um die Option zu sehen
+4. Klicken Sie nach dem Neustart mit der rechten Maustaste auf einen leeren Bereich der Tableiste, um die Option zu sehen
 
 ## Installation
 
@@ -195,7 +195,7 @@ Nach dem Bearbeiten laden Sie die Hammerspoon-Konfiguration neu, um die Änderun
 
 1. Ein `eventtap` fängt `Cmd+S` ab, wenn Chrome im Vordergrund ist (Schemata 1 & 3)
 2. Ein Mauspositions-Poller (50Hz) erkennt das Schweben am linken Rand und das Verlassen (Schemata 2 & 3)
-3. Beide Auslöser rufen `toggleSidebar()` auf, das:
+3. Beide Auslöser rufen die Funktion `toggleSidebar()` auf. Diese Funktion:
    - Das AX-Wurzelelement von Chrome über `hs.axuielement.applicationElement()` erhält
    - In den Fenstern nach einer Schaltfläche mit `AXDescription` sucht, die zu "Expand Tabs" oder "Collapse Tabs" passt
    - `performAction("AXPress")` auf der gefundenen Schaltfläche aufruft

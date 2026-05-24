@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 1. アドレスバーに `chrome://flags/#vertical-tabs` と入力してください
 2. **Vertical tabs** を **Enabled** に変更してください
 3. **Relaunch** をクリックして Chrome を再起動してください
-4. 再起動後、タブバーの空白部分を右クリックするとオプションが表示されます
+4. 再起動後、タブバーの空白部分を右クリックしてオプションを確認してください
 
 ## インストール
 
@@ -167,7 +167,7 @@ keycodes.map["space"]   -- Space
 keycodes.map["f1"]      -- F1
 ```
 
-完全なキー名の一覧:Hammerspoon コンソールで `hs.keycodes.map` を実行してください。
+完全なキー名の一覧: Hammerspoon コンソールで `hs.keycodes.map` を実行してください。
 
 ### 例
 
@@ -195,7 +195,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 1. `eventtap` が Chrome が最前面のときに `Cmd+S` を傍受(スキーム 1 & 3)
 2. マウス位置監視タイマー (50Hz) が左端のホバーと退出を検出 (スキーム 2 & 3)
-3. 両方のトリガーが `toggleSidebar()` を呼び出し:
+3. 両方のトリガーが `toggleSidebar()` を呼び出し :
    - `hs.axuielement.applicationElement()` で Chrome の AX ルート要素を取得
    - ウィンドウ内で `AXDescription` が "Expand Tabs" または "Collapse Tabs" に一致するボタンを検索
    - 見つかったボタンに `performAction("AXPress")` を呼び出し

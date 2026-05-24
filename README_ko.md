@@ -167,7 +167,7 @@ keycodes.map["space"]   -- Space
 keycodes.map["f1"]      -- F1
 ```
 
-전체 키 이름 목록:Hammerspoon 콘솔에서 `hs.keycodes.map`를 실행하세요.
+전체 키 이름 목록: Hammerspoon 콘솔에서 `hs.keycodes.map`를 실행하세요.
 
 ### 예시
 
@@ -193,7 +193,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 ## 작동 방식
 
-1. `eventtap`가 Chrome이 포그라운드일 때 `Cmd+S`를 가로챔 (스킴 1 & 3)
+1. `eventtap`가 Chrome이 포그라운드일 때 `Cmd+S`를 가로채기 (스킴 1 & 3)
 2. 마우스 위치 폴러 (50Hz)가 왼쪽 가장자리 호버와 이탈을 감지 (스킴 2 & 3)
 3. 두 트리거 모두 `toggleSidebar()`를 호출:
    - `hs.axuielement.applicationElement()`로 Chrome의 AX 루트 요소를 가져옴

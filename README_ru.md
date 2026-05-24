@@ -195,7 +195,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 1. `eventtap` перехватывает `Cmd+S`, когда Chrome является активным приложением (схемы 1 & 3)
 2. Таймер опроса положения мыши (50 Гц) обнаруживает наведение на левый край экрана и уход курсора (схемы 2 & 3)
-3. Оба триггера вызывают `toggleSidebar()`, который:
+3. Оба триггера вызывают функцию `toggleSidebar()`, которая:
    - Получает корневой элемент AX Chrome через `hs.axuielement.applicationElement()`
    - Ищет в окнах кнопку с `AXDescription`, соответствующим "Expand Tabs" или "Collapse Tabs"
    - Вызывает `performAction("AXPress")` на найденной кнопке

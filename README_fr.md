@@ -59,7 +59,7 @@ La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'ac
    cp init.lua ~/.hammerspoon/init.lua
    ```
 
-   **Version clavier uniquement**:
+   **Version clavier uniquement** :
    ```bash
    cp init-keyboard-only.lua ~/.hammerspoon/init.lua
    ```
@@ -97,7 +97,7 @@ Lorsque Chrome n'est pas l'application au premier plan, tous les déclencheurs s
 | Déclencheur | Action | Schéma |
 |-------------|--------|--------|
 | `Cmd+S` | Basculer la barre latérale | 1 & 3 |
-| Souris sur le bord gauche (0-2px) pendant 0.15s | Développer la barre latérale | 2 & 3 |
+| Souris sur le bord gauche (0-2px) pendant 0,15 s | Développer la barre latérale | 2 & 3 |
 | Souris se déplace au-delà de 380px du bord gauche | Réduire la barre latérale | 2 & 3 |
 
 ## Débogage

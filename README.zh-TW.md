@@ -167,7 +167,7 @@ keycodes.map["space"]   -- 空白鍵
 keycodes.map["f1"]      -- F1
 ```
 
-完整按鍵名稱列表：在 Hammerspoon 主控台中執行 `hs.keycodes.map`。
+完整按鍵名稱列表: 在 Hammerspoon 主控台中執行 `hs.keycodes.map`。
 
 ### 範例
 
