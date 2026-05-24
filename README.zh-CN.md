@@ -193,7 +193,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 ## 工作原理
 
-1. `eventtap` 在 Chrome 为前台时拦截 `Cmd+S`（方案 1 和 3）
+1. 当 Chrome 处于前台时，`eventtap` 会拦截 `Cmd+S`（方案 1 和 3）
 2. 鼠标位置轮询器（50Hz）检测左边缘悬停和离开（方案 2 和 3）
 3. 两个触发器都调用 `toggleSidebar()`：
    - 通过 `hs.axuielement.applicationElement()` 获取 Chrome 的 AX 根元素

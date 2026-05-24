@@ -46,13 +46,13 @@ Die vertikale Tab-Seitenleiste ist standardmäßig deaktiviert. Um sie zu aktivi
 
 ## Installation
 
-1. Hammerspoon installieren:
+1. Installieren Sie Hammerspoon:
 
    ```bash
    brew install --cask hammerspoon
    ```
 
-2. Version wählen und in die Hammerspoon-Konfiguration kopieren:
+2. Wählen Sie eine Version und kopieren Sie sie in die Hammerspoon-Konfiguration:
 
    **Schema-Version** (drei Modi, Standard):
    ```bash
@@ -66,15 +66,15 @@ Die vertikale Tab-Seitenleiste ist standardmäßig deaktiviert. Um sie zu aktivi
 
    Falls bereits eine `~/.hammerspoon/init.lua` existiert, fügen Sie den Inhalt am Ende hinzu.
 
-3. Berechtigung für Bedienungshilfen erteilen:
+3. Erteilen Sie die Berechtigung für Bedienungshilfen:
    - Systemeinstellungen → Datenschutz & Sicherheit → Bedienungshilfen
-   - Hammerspoon hinzufügen und aktivieren
+   - Fügen Sie Hammerspoon hinzu und aktivieren Sie es
 
-4. Hammerspoon-Konfiguration neu laden (Klicken Sie auf das Menüleisten-Symbol → Konfiguration neu laden)
+4. Laden Sie die Hammerspoon-Konfiguration neu (Klicken Sie auf das Menüleisten-Symbol → Konfiguration neu laden)
 
-5. (Optional) Hammerspoon zu den Login-Objekten hinzufügen, damit es automatisch startet:
+5. (Optional) Fügen Sie Hammerspoon zu den Login-Objekten hinzu, damit es automatisch startet:
    - Systemeinstellungen → Allgemein → Login-Objekte
-   - Hammerspoon hinzufügen
+   - Fügen Sie Hammerspoon hinzu
 
 ## Schemata (`init.lua`)
 
@@ -121,7 +121,7 @@ local SCHEME = 3  -- 1 = Tastatur, 2 = Bildschirmrand, 3 = Beides
 ```lua
 local EDGE_THRESHOLD    = 2       -- Pixel vom linken Rand zum Auslösen
 local EXIT_THRESHOLD    = 380     -- Pixel vom linken Rand zum Reduzieren
-local WAIT_TIME         = 0.15    -- Sekunden Wartezeit vor dem Ausloesen
+local WAIT_TIME         = 0.15    -- Sekunden Wartezeit vor dem Auslösen
 local MOUSE_POLL_INTERVAL = 0.05  -- Sekunden zwischen Mauspositionsprüfungen
 ```
 

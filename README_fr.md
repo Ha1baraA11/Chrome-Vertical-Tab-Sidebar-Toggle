@@ -42,17 +42,17 @@ La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'ac
 1. Tapez `chrome://flags/#vertical-tabs` dans la barre d'adresse
 2. Changez **Vertical tabs** en **Enabled**
 3. Cliquez sur **Relaunch** pour redémarrer Chrome
-4. Après le redémarrage, faites clic droit sur une zone vide de la barre d'onglets pour voir l'option
+4. Après le redémarrage, faites un clic droit sur une zone vide de la barre d'onglets pour voir l'option
 
 ## Installation
 
-1. Installer Hammerspoon:
+1. Installez Hammerspoon :
 
    ```bash
    brew install --cask hammerspoon
    ```
 
-2. Choisir une version et copier dans la configuration Hammerspoon:
+2. Choisissez une version et copiez-la dans la configuration Hammerspoon :
 
    **Version avec schémas**(trois modes, par défaut):
    ```bash
@@ -66,15 +66,15 @@ La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'ac
 
    Si vous avez déjà un `~/.hammerspoon/init.lua`, ajoutez le contenu à la fin.
 
-3. Accorder l'autorisation d'accessibilité:
+3. Accordez l'autorisation d'accessibilité :
    - Réglages du Système → Confidentialité et sécurité → Accessibilité
-   - Ajouter et activer Hammerspoon
+   - Ajoutez et activez Hammerspoon
 
-4. Recharger la configuration Hammerspoon (cliquez sur l'icône de la barre de menus → Recharger la configuration)
+4. Rechargez la configuration Hammerspoon (cliquez sur l'icône de la barre de menus → Recharger la configuration)
 
-5. (Facultatif) Ajouter Hammerspoon aux éléments de connexion pour un démarrage automatique:
+5. (Facultatif) Ajoutez Hammerspoon aux éléments de connexion pour un démarrage automatique :
    - Réglages du Système → Général → Éléments de connexion
-   - Ajouter Hammerspoon
+   - Ajoutez Hammerspoon
 
 ## Schémas (`init.lua`)
 

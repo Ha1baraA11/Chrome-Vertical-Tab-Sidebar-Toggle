@@ -46,13 +46,13 @@ La barra lateral de pestañas verticales no está activada por defecto. Para act
 
 ## Instalación
 
-1. Instalar Hammerspoon:
+1. Instala Hammerspoon:
 
    ```bash
    brew install --cask hammerspoon
    ```
 
-2. Elegir una versión y copiar a la configuración de Hammerspoon:
+2. Elige una versión y cópiala en la configuración de Hammerspoon:
 
    **Versión con esquemas** (tres modos, por defecto):
    ```bash
@@ -66,15 +66,15 @@ La barra lateral de pestañas verticales no está activada por defecto. Para act
 
    Si ya tienes un `~/.hammerspoon/init.lua`, añade el contenido al final.
 
-3. Otorgar permiso de accesibilidad:
+3. Otorga el permiso de accesibilidad:
    - Ajustes del Sistema → Privacidad y Seguridad → Accesibilidad
-   - Añadir y habilitar Hammerspoon
+   - Añade y habilita Hammerspoon
 
-4. Recargar la configuración de Hammerspoon (haz clic en el icono de la barra de menú → Recargar Configuración)
+4. Recarga la configuración de Hammerspoon (haz clic en el icono de la barra de menú → Recargar Configuración)
 
-5. (Opcional) Añadir Hammerspoon a los elementos de inicio para que se ejecute automáticamente:
+5. (Opcional) Añade Hammerspoon a los elementos de inicio para que se ejecute automáticamente:
    - Ajustes del Sistema → General → Ítems de inicio
-   - Añadir Hammerspoon
+   - Añade Hammerspoon
 
 ## Esquemas (`init.lua`)
 

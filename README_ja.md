@@ -39,20 +39,20 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 垂直タブサイドバーはデフォルトで無効になっています。有効にするには:
 
-1. アドレスバーに `chrome://flags/#vertical-tabs` と入力
-2. **Vertical tabs** を **Enabled** に変更
-3. **Relaunch** をクリックして Chrome を再起動
+1. アドレスバーに `chrome://flags/#vertical-tabs` と入力してください
+2. **Vertical tabs** を **Enabled** に変更してください
+3. **Relaunch** をクリックして Chrome を再起動してください
 4. 再起動後、タブバーの空白部分を右クリックするとオプションが表示されます
 
 ## インストール
 
-1. Hammerspoon をインストール:
+1. Hammerspoon をインストールしてください:
 
    ```bash
    brew install --cask hammerspoon
    ```
 
-2. バージョンを選択して Hammerspoon 設定にコピー:
+2. バージョンを選択して Hammerspoon 設定にコピーしてください:
 
    **スキームバージョン** (3モード、デフォルト):
    ```bash
@@ -66,13 +66,13 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
    既に `~/.hammerspoon/init.lua` がある場合は、内容を末尾に追加してください。
 
-3. アクセシビリティ権限を付与:
+3. アクセシビリティ権限を付与してください:
    - システム設定 → プライバシーとセキュリティ → アクセシビリティ
    - Hammerspoon を追加して有効にする
 
-4. Hammerspoon 設定をリロード (メニューバーのアイコン → 設定をリロード)
+4. Hammerspoon 設定をリロードしてください (メニューバーのアイコン → 設定をリロードをクリック)
 
-5. (オプション) Hammerspoon をログインアイテムに追加して自動起動を設定:
+5. (オプション) Hammerspoon をログインアイテムに追加して自動起動を設定してください:
    - システム設定 → 一般 → ログインアイテム
    - Hammerspoon を追加
 

@@ -46,13 +46,13 @@ A barra lateral de abas verticais não está ativada por padrão. Para ativar:
 
 ## Instalação
 
-1. Instalar o Hammerspoon:
+1. Instale o Hammerspoon:
 
    ```bash
    brew install --cask hammerspoon
    ```
 
-2. Escolher uma versão e copiar para a configuração do Hammerspoon:
+2. Escolha uma versão e copie para a configuração do Hammerspoon:
 
    **Versão com esquemas** (três modos, padrão):
    ```bash
@@ -66,15 +66,15 @@ A barra lateral de abas verticais não está ativada por padrão. Para ativar:
 
    Se você já tem um `~/.hammerspoon/init.lua`, adicione o conteúdo ao final.
 
-3. Conceder permissão de acessibilidade:
+3. Conceda permissão de acessibilidade:
    - Ajustes do Sistema → Privacidade e Segurança → Acessibilidade
-   - Adicionar e habilitar o Hammerspoon
+   - Adicione e habilite o Hammerspoon
 
-4. Recarregar a configuração do Hammerspoon (clique no ícone da barra de menu → Recarregar Configuração)
+4. Recarregue a configuração do Hammerspoon (clique no ícone da barra de menu → Recarregar Configuração)
 
-5. (Opcional) Adicionar o Hammerspoon aos itens de login para iniciar automaticamente:
+5. (Opcional) Adicione o Hammerspoon aos itens de login para iniciar automaticamente:
    - Ajustes do Sistema → Geral → Itens de Início
-   - Adicionar Hammerspoon
+   - Adicione Hammerspoon
 
 ## Esquemas (`init.lua`)
 

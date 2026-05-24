@@ -39,20 +39,20 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 수직 탭 사이드바는 기본적으로 비활성화되어 있습니다. 활성화하려면:
 
-1. 주소창에 `chrome://flags/#vertical-tabs` 입력
-2. **Vertical tabs**를 **Enabled**로 변경
-3. **Relaunch**를 클릭하여 Chrome 재시작
+1. 주소창에 `chrome://flags/#vertical-tabs`를 입력하세요
+2. **Vertical tabs**를 **Enabled**로 변경하세요
+3. **Relaunch**를 클릭하여 Chrome을 재시작하세요
 4. 재시작 후 탭 표시줄의 빈 공간을 우클릭하면 옵션을 볼 수 있습니다
 
 ## 설치
 
-1. Hammerspoon 설치:
+1. Hammerspoon을 설치하세요:
 
    ```bash
    brew install --cask hammerspoon
    ```
 
-2. 버전을 선택하고 Hammerspoon 설정에 복사:
+2. 버전을 선택하고 Hammerspoon 설정에 복사하세요:
 
    **스킴 버전** (3가지 모드, 기본값):
    ```bash
@@ -66,15 +66,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
    이미 `~/.hammerspoon/init.lua`가 있는 경우 내용을 끝에 추가하세요.
 
-3. 접근성 권한 부여:
+3. 접근성 권한을 부여하세요:
    - 시스템 설정 → 개인정보 보호 및 보안 → 접근성
-   - Hammerspoon 추가 및 활성화
+   - Hammerspoon을 추가하고 활성화하세요
 
-4. Hammerspoon 설정 다시 로드 (메뉴 표시줄 아이콘 → 설정 다시 로드)
+4. Hammerspoon 설정을 다시 로드하세요 (메뉴 표시줄 아이콘 → 설정 다시 로드 클릭)
 
-5. (선택) Hammerspoon을 로그인 항목에 추가하여 자동 시작 설정:
+5. (선택) Hammerspoon을 로그인 항목에 추가하여 자동 시작을 설정하세요:
    - 시스템 설정 → 일반 → 로그인 항목
-   - Hammerspoon 추가
+   - Hammerspoon을 추가하세요
 
 ## 스킴 (`init.lua`)
 
