@@ -121,7 +121,7 @@ local SCHEME = 3  -- 1 = Tastatur, 2 = Bildschirmrand, 3 = Beides
 ```lua
 local EDGE_THRESHOLD    = 2       -- Pixel vom linken Rand zum Auslösen
 local EXIT_THRESHOLD    = 380     -- Pixel vom linken Rand zum Reduzieren
-local WAIT_TIME         = 0.15    -- Sekunden Wartezeit vor dem Auslösen
+local WAIT_TIME         = 0.15    -- Wartezeit in Sekunden vor dem Auslösen (0,15 s)
 local MOUSE_POLL_INTERVAL = 0.05  -- Sekunden zwischen Mauspositionsprüfungen
 ```
 

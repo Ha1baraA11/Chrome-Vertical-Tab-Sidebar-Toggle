@@ -193,14 +193,14 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 ## 작동 방식
 
-1. `eventtap`가 Chrome이 포그라운드일 때 `Cmd+S`를 가로채기 (스킴 1 & 3)
-2. 마우스 위치 폴러 (50Hz)가 왼쪽 가장자리 호버와 이탈을 감지 (스킴 2 & 3)
-3. 두 트리거 모두 `toggleSidebar()`를 호출:
+1. Chrome 포그라운드 시 `Cmd+S` 가로채기 (스킴 1 & 3)
+2. 화면 왼쪽 가장자리 호버 및 이탈 감지 (스킴 2 & 3)
+3. 두 트리거 모두 `toggleSidebar()` 호출:
    - `hs.axuielement.applicationElement()`로 Chrome의 AX 루트 요소를 가져옴
    - 윈도우에서 `AXDescription`이 "Expand Tabs" 또는 "Collapse Tabs"와 일치하는 버튼을 검색
    - 찾은 버튼에 `performAction("AXPress")`를 호출
-4. 워치독이 마우스 폴러의 오류를 감지하고 자동 재시작 (스킴 2 & 3)
-5. 오작동 방지 유예 시간을 통한 앱 전환 시 오작동 방지
+4. 마우스 폴러 오류 감지 및 자동 재시작 (스킴 2 & 3)
+5. 앱 전환 시 오작동 방지 유예 시간을 통한 오작동 방지
 
 ## 파일
 

@@ -121,7 +121,7 @@ local SCHEME = 3  -- 1 = Clavier, 2 = Bord de l'écran, 3 = Les deux
 ```lua
 local EDGE_THRESHOLD    = 2       -- pixels depuis le bord gauche pour déclencher
 local EXIT_THRESHOLD    = 380     -- pixels depuis le bord gauche pour réduire
-local WAIT_TIME         = 0.15    -- secondes d'attente avant déclenchement
+local WAIT_TIME         = 0.15    -- temps d'attente en secondes avant déclenchement (0,15 s)
 local MOUSE_POLL_INTERVAL = 0.05  -- secondes entre les vérifications de position de la souris
 ```
 
@@ -211,7 +211,7 @@ Après modification, rechargez la configuration Hammerspoon pour appliquer les c
 
 ## Crédits
 
-- Concept original:[ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast) by RotulPlastik
+- Concept original : [ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast) par RotulPlastik
 - Adapté pour Hammerspoon avec déclenchement par bord de l'écran
 
 ## Licence

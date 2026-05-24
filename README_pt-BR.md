@@ -121,7 +121,7 @@ local SCHEME = 3  -- 1 = Teclado, 2 = Borda da tela, 3 = Ambos
 ```lua
 local EDGE_THRESHOLD    = 2       -- pixels da borda esquerda para ativar
 local EXIT_THRESHOLD    = 380     -- pixels da borda esquerda para recolher
-local WAIT_TIME         = 0.15    -- segundos de espera antes de ativar
+local WAIT_TIME         = 0.15    -- tempo de espera em segundos antes de ativar (0,15 s)
 local MOUSE_POLL_INTERVAL = 0.05  -- segundos entre verificações de posição do mouse
 ```
 
