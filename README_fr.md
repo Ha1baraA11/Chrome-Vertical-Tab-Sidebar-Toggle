@@ -73,7 +73,7 @@ La barre latérale d'onglets verticaux n'est pas activée par défaut. Pour l'ac
 4. Rechargez la configuration Hammerspoon (cliquez sur l'icône de la barre de menus → Recharger la configuration)
 
 5. (Facultatif) Ajoutez Hammerspoon aux éléments de connexion pour un démarrage automatique :
-   - Réglages Système → Général → Éléments de connexion
+   - Réglages Système → Général → Ouverture
    - Ajoutez Hammerspoon
 
 ## Schémas (`init.lua`)
@@ -195,7 +195,7 @@ Après modification, rechargez la configuration Hammerspoon pour appliquer les c
 
 1. Un `eventtap` intercepte `Cmd+S` lorsque Chrome est au premier plan (schémas 1 & 3)
 2. Un sondage de position de la souris (50Hz) détecte le survol du bord gauche et la sortie (schémas 2 & 3)
-3. Les deux déclencheurs appellent `toggleSidebar()` qui:
+3. Les deux déclencheurs appellent `toggleSidebar()` qui :
    - Obtient l'élément racine AX de Chrome via `hs.axuielement.applicationElement()`
    - Recherche dans les fenêtres un bouton avec `AXDescription` correspondant à "Expand Tabs" ou "Collapse Tabs"
    - Appelle `performAction("AXPress")` sur le bouton trouvé
