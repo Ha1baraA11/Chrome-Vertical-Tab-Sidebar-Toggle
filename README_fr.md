@@ -17,7 +17,7 @@
 
 ## Fonctionnalités
 
-Chrome dispose d'une barre latérale d'onglets verticaux intégrée, mais aucun raccourci clavier pour la basculer. Ce script résout ce problème avec deux versions:
+Chrome dispose d'une barre latérale d'onglets verticaux intégrée, mais aucun raccourci clavier ne permet de l'afficher ou de la masquer. Ce script propose deux versions pour y remédier:
 
 - **`init.lua`** — prend en charge trois schémas sélectionnables (clavier / bord de l'écran / les deux)
 - **`init-keyboard-only.lua`** — raccourci clavier uniquement, sans détection de souris

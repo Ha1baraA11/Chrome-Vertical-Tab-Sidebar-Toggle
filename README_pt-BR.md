@@ -5,7 +5,7 @@
 <h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
 <p align="center">
-  <strong>Um script Hammerspoon que alterna a barra lateral de abas verticais nativa do Chrome através da API de Acessibilidade do macOS</strong><br>
+  <strong>Um script Hammerspoon para exibir/ocultar a barra lateral de abas verticais nativa do Chrome através da API de Acessibilidade do macOS</strong><br>
   Atalho de teclado, ativação pela borda da tela, ou ambos — você escolhe.
 </p>
 
@@ -82,7 +82,7 @@ Edite a variável `SCHEME` no topo do `init.lua` para escolher um modo:
 
 | Esquema | Valor | Gatilhos |
 |---------|-------|----------|
-| Apenas teclado | `1` | `Cmd+S` alterna a barra lateral |
+| Apenas teclado | `1` | `Cmd+S` exibe/oculta a barra lateral |
 | Apenas borda da tela | `2` | Passar o mouse na borda esquerda da tela para expandir, mover além de 380px para recolher |
 | Teclado + Mouse | `3` | Ambos os gatilhos ativos (padrão) |
 
@@ -96,7 +96,7 @@ Quando o Chrome não é o aplicativo em primeiro plano, todos os gatilhos são d
 
 | Gatilho | Ação | Esquema |
 |---------|------|---------|
-| `Cmd+S` | Alternar barra lateral | 1 & 3 |
+| `Cmd+S` | Exibir/ocultar barra lateral | 1 & 3 |
 | Mouse na borda esquerda (0-2px) por 0.15s | Expandir barra lateral | 2 & 3 |
 | Mouse se move além de 380px da borda esquerda | Recolher barra lateral | 2 & 3 |
 

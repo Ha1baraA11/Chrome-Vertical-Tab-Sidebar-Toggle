@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>通过 macOS 辅助功能 API 切换 Chrome 原生垂直标签页侧边栏的 Hammerspoon 脚本</strong><br>
-  键盘快捷键、鼠标边缘触发，或两者兼用，随你选择。
+  键盘快捷键、屏幕边缘悬停触发，或两者兼用，随你选择。
 </p>
 
 <p align="center">

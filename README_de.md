@@ -97,7 +97,7 @@ Wenn Chrome nicht die Vordergrund-App ist, werden alle Auslöser automatisch dea
 | Auslöser | Aktion | Schema |
 |----------|--------|--------|
 | `Cmd+S` | Seitenleiste umschalten | 1 & 3 |
-| Maus am linken Rand (0-2px) für 0.15s | Seitenleiste erweitern | 2 & 3 |
+| Maus am linken Rand (0-2px) für 0,15 s | Seitenleiste erweitern | 2 & 3 |
 | Maus bewegt sich über 380px vom linken Rand | Seitenleiste reduzieren | 2 & 3 |
 
 ## Debug
