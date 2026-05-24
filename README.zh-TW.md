@@ -5,8 +5,8 @@
 <h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
 <p align="center">
-  <strong>透過 macOS 無障礙 API 切換 Chrome 原生垂直標籤欄側邊欄的 Hammerspoon 腳本</strong><br>
-  鍵盤快捷鍵、滑鼠邊緣觸發，或兩者兼用，隨你選擇。
+  <strong>透過 macOS 輔助功能 API 切換 Chrome 原生垂直分頁側邊欄的 Hammerspoon 腳本</strong><br>
+  鍵盤快速鍵、滑鼠邊緣觸發，或兩者兼用，隨你選擇。
 </p>
 
 <p align="center">
@@ -17,12 +17,12 @@
 
 ## 功能介紹
 
-Chrome 有內建的垂直標籤欄側邊欄，但沒有快捷鍵來切換它。這個腳本提供兩個版本來解決這個問題：
+Chrome 有內建的垂直分頁側邊欄，但沒有快速鍵來切換它。這個腳本提供兩個版本來解決這個問題：
 
-- **`init.lua`** — 支援三種可選方案（快捷鍵 / 滑鼠邊緣 / 兩者兼有）
-- **`init-keyboard-only.lua`** — 僅快捷鍵，無滑鼠偵測
+- **`init.lua`** — 支援三種可選方案（快速鍵 / 滑鼠邊緣 / 兩者兼有）
+- **`init-keyboard-only.lua`** — 僅快速鍵，無滑鼠偵測
 
-原理是遍歷 Chrome 的無障礙樹（`AXUIElement`），找到「Expand Tabs」或「Collapse Tabs」按鈕，然後透過 `AXPress` 點擊它。方法與 [ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast) 相同。
+原理是遍歷 Chrome 的輔助功能樹（`AXUIElement`），找到「Expand Tabs」或「Collapse Tabs」按鈕，然後透過 `AXPress` 點擊它。方法與 [ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast) 相同。
 
 ## 演示
 
@@ -32,17 +32,17 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 - macOS 13+
 - [Hammerspoon](https://www.hammerspoon.org)
-- Google Chrome 已啟用垂直標籤欄側邊欄
+- Google Chrome 已啟用垂直分頁側邊欄
 - Hammerspoon 已取得輔助使用權限
 
-## 在 Chrome 中開啟垂直標籤欄側邊欄
+## 在 Chrome 中開啟垂直分頁側邊欄
 
-垂直標籤欄側邊欄預設未開啟，需要手動啟用：
+垂直分頁側邊欄預設未開啟，需要手動啟用：
 
 1. 在網址列輸入 `chrome://flags/#vertical-tabs`
 2. 將 **Vertical tabs** 改為 **Enabled**
 3. 點擊 **Relaunch** 重啟瀏覽器
-4. 重啟後，右鍵標籤欄頂部空白處即可看到選項
+4. 重啟後，右鍵分頁列頂部空白處即可看到選項
 
 ## 安裝步驟
 
@@ -59,7 +59,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    cp init.lua ~/.hammerspoon/init.lua
    ```
 
-   **純快捷鍵版本**：
+   **純快速鍵版本**：
    ```bash
    cp init-keyboard-only.lua ~/.hammerspoon/init.lua
    ```
@@ -82,15 +82,15 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 | 方案 | 值 | 觸發方式 |
 |------|-----|----------|
-| 純快捷鍵 | `1` | `Cmd+S` 切換側邊欄 |
+| 純快速鍵 | `1` | `Cmd+S` 切換側邊欄 |
 | 純滑鼠邊緣 | `2` | 懸停左邊緣展開，移出超過 380px 收合 |
-| 快捷鍵 + 滑鼠 | `3` | 兩種觸發同時生效（預設） |
+| 快速鍵 + 滑鼠 | `3` | 兩種觸發同時生效（預設） |
 
 ```lua
-local SCHEME = 3  -- 1 = 快捷鍵, 2 = 滑鼠邊緣, 3 = 兩者兼有
+local SCHEME = 3  -- 1 = 快速鍵, 2 = 滑鼠邊緣, 3 = 兩者兼有
 ```
 
-當 Chrome 不是前景應用時，所有觸發自動停用。
+當 Chrome 不是前景應用程式時，所有觸發自動停用。
 
 ## 觸發方式
 
@@ -102,10 +102,10 @@ local SCHEME = 3  -- 1 = 快捷鍵, 2 = 滑鼠邊緣, 3 = 兩者兼有
 
 ## 偵錯
 
-| 快捷鍵 | 功能 |
+| 快速鍵 | 功能 |
 |--------|------|
 | `Cmd+Alt+D` | 顯示服務狀態 |
-| `Cmd+Alt+B` | 將 Chrome AX 樹中所有按鈕輸出到控制台 |
+| `Cmd+Alt+B` | 將 Chrome AX 樹中所有按鈕輸出到主控台 |
 | `Cmd+Alt+R` | 強制重新啟動所有服務 |
 
 ## 設定項目
@@ -113,7 +113,7 @@ local SCHEME = 3  -- 1 = 快捷鍵, 2 = 滑鼠邊緣, 3 = 兩者兼有
 ### 方案選擇器（`init.lua`）
 
 ```lua
-local SCHEME = 3  -- 1 = 快捷鍵, 2 = 滑鼠邊緣, 3 = 兩者兼有
+local SCHEME = 3  -- 1 = 快速鍵, 2 = 滑鼠邊緣, 3 = 兩者兼有
 ```
 
 ### 滑鼠邊緣閾值（`init.lua`，方案 2 和 3）
@@ -128,12 +128,12 @@ local MOUSE_POLL_INTERVAL = 0.05  -- 滑鼠輪詢間隔（秒）
 ### 兩個版本通用
 
 ```lua
-local DEBUG = true  -- 是否輸出偵錯資訊到控制台
+local DEBUG = true  -- 是否輸出偵錯資訊到主控台
 ```
 
-## 自訂快捷鍵
+## 自訂快速鍵
 
-`init.lua` 和 `init-keyboard-only.lua` 均支援自訂快捷鍵。預設快捷鍵為 `Cmd+S`，會覆蓋 Chrome 原生的「儲存網頁」快捷鍵。如需修改，編輯 `createKeyTap` 函式內的按鍵判斷：
+`init.lua` 和 `init-keyboard-only.lua` 均支援自訂快速鍵。預設快速鍵為 `Cmd+S`，會覆蓋 Chrome 原生的「儲存網頁」快速鍵。如需修改，編輯 `createKeyTap` 函式內的按鍵判斷：
 
 ```lua
 -- Cmd+S -> toggle sidebar
@@ -167,7 +167,7 @@ keycodes.map["space"]   -- 空白鍵
 keycodes.map["f1"]      -- F1
 ```
 
-完整按鍵名稱列表：在 Hammerspoon 控制台中執行 `hs.keycodes.map`。
+完整按鍵名稱列表：在 Hammerspoon 主控台中執行 `hs.keycodes.map`。
 
 ### 範例
 
@@ -199,15 +199,15 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
    - 透過 `hs.axuielement.applicationElement()` 取得 Chrome 的 AX 根元素
    - 在視窗中搜尋 `AXDescription` 符合「Expand Tabs」或「Collapse Tabs」的按鈕
    - 呼叫 `performAction("AXPress")` 點擊按鈕
-4. 看門狗偵測滑鼠輪詢器是否停止並自動重新啟動（方案 2 和 3）
-5. 寬限期防止應用切換時的誤觸發
+4. Watchdog 機制偵測滑鼠輪詢器是否異常並自動重新啟動（方案 2 和 3）
+5. 防誤觸緩衝時間防止應用切換時的誤觸發
 
 ## 檔案說明
 
 | 檔案 | 說明 |
 |------|------|
-| `init.lua` | 三方案版本（快捷鍵 / 滑鼠 / 兩者兼有） |
-| `init-keyboard-only.lua` | 純快捷鍵版本，無滑鼠偵測 |
+| `init.lua` | 三方案版本（快速鍵 / 滑鼠 / 兩者兼有） |
+| `init-keyboard-only.lua` | 純快速鍵版本，無滑鼠偵測 |
 
 ## 致謝
 

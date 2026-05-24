@@ -5,7 +5,7 @@
 <h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
 <p align="center">
-  <strong>通过 macOS 无障碍 API 切换 Chrome 原生垂直标签栏侧边栏的 Hammerspoon 脚本</strong><br>
+  <strong>通过 macOS 辅助功能 API 切换 Chrome 原生垂直标签页侧边栏的 Hammerspoon 脚本</strong><br>
   键盘快捷键、鼠标边缘触发，或两者兼用，随你选择。
 </p>
 
@@ -17,12 +17,12 @@
 
 ## 功能介绍
 
-Chrome 有内置的垂直标签栏侧边栏，但没有快捷键来切换它。这个脚本提供两个版本来解决这个问题：
+Chrome 有内置的垂直标签页侧边栏，但没有快捷键来切换它。这个脚本提供两个版本来解决这个问题：
 
 - **`init.lua`** — 支持三种可选方案（快捷键 / 鼠标边缘 / 两者兼有）
 - **`init-keyboard-only.lua`** — 仅快捷键，无鼠标检测
 
-原理是遍历 Chrome 的无障碍树（`AXUIElement`），找到"Expand Tabs"或"Collapse Tabs"按钮，然后通过 `AXPress` 点击它。方法与 [ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast) 相同。
+原理是遍历 Chrome 的辅助功能树（`AXUIElement`），找到"Expand Tabs"或"Collapse Tabs"按钮，然后通过 `AXPress` 点击它。方法与 [ChromeSidebarToggleRaycast](https://github.com/RotulPlastik/ChromeSidebarToggleRaycast) 相同。
 
 ## 演示
 
@@ -32,12 +32,12 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 - macOS 13+
 - [Hammerspoon](https://www.hammerspoon.org)
-- Google Chrome 已启用垂直标签栏侧边栏
+- Google Chrome 已启用垂直标签页侧边栏
 - Hammerspoon 已获得辅助功能权限
 
-## 在 Chrome 中开启垂直标签栏侧边栏
+## 在 Chrome 中开启垂直标签页侧边栏
 
-垂直标签栏侧边栏默认未开启，需要手动启用：
+垂直标签页侧边栏默认未开启，需要手动启用：
 
 1. 在地址栏输入 `chrome://flags/#vertical-tabs`
 2. 将 **Vertical tabs** 改为 **Enabled**
@@ -199,8 +199,8 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
    - 通过 `hs.axuielement.applicationElement()` 获取 Chrome 的 AX 根元素
    - 在窗口中搜索 `AXDescription` 匹配 "Expand Tabs" 或 "Collapse Tabs" 的按钮
    - 调用 `performAction("AXPress")` 点击按钮
-4. 看门狗检测鼠标轮询器是否死亡并自动重启（方案 2 和 3）
-5. 宽限期防止应用切换时的误触发
+4. Watchdog 机制检测鼠标轮询器是否异常并自动重启（方案 2 和 3）
+5. 防误触缓冲时间防止应用切换时的误触发
 
 ## 文件说明
 
