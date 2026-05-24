@@ -196,9 +196,9 @@ Após editar, recarregue a configuração do Hammerspoon para aplicar.
 1. Um `eventtap` intercepta `Cmd+S` quando o Chrome está em primeiro plano (esquemas 1 & 3)
 2. Um monitor de posição do mouse (50Hz) detecta a passagem pela borda esquerda e a saída (esquemas 2 & 3)
 3. Ambos os gatilhos chamam `toggleSidebar()`, que:
-   - Obter o elemento raiz AX do Chrome via `hs.axuielement.applicationElement()`
-   - Procurar nas janelas um botão com `AXDescription` correspondendo a "Expand Tabs" ou "Collapse Tabs"
-   - Chamar `performAction("AXPress")` no botão encontrado
+   - Obtém o elemento raiz AX do Chrome via `hs.axuielement.applicationElement()`
+   - Procura nas janelas um botão com `AXDescription` correspondendo a "Expand Tabs" ou "Collapse Tabs"
+   - Chama `performAction("AXPress")` no botão encontrado
 4. Um watchdog detecta se o monitor do mouse falha e reinicia automaticamente (esquemas 2 & 3)
 5. Períodos de tolerância previnem gatilhos falsos durante a troca de aplicativos
 

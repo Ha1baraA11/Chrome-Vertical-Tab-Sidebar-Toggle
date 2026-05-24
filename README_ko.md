@@ -193,7 +193,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 ## 작동 방식
 
-1. Chrome 포그라운드 시 `Cmd+S` 가로채기 (스킴 1 & 3)
+1. Chrome 포그라운드 시 `Cmd+S` 차단 및 제어 (스킴 1 & 3)
 2. 화면 왼쪽 가장자리 호버 및 이탈 감지 (스킴 2 & 3)
 3. 두 트리거 모두 `toggleSidebar()` 호출:
    - `hs.axuielement.applicationElement()`로 Chrome의 AX 루트 요소 가져오기
