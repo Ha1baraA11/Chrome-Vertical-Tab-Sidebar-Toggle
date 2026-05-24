@@ -120,7 +120,7 @@ local SCHEME = 3  -- 1 = 키보드, 2 = 화면 가장자리 호버, 3 = 둘 다
 
 ```lua
 local EDGE_THRESHOLD    = 2       -- 왼쪽 가장자리에서의 트리거 거리 (픽셀)
-local EXIT_THRESHOLD    = 380     -- 접기 트리거의 왼쪽 가장자리からの 거리 (픽셀)
+local EXIT_THRESHOLD    = 380     -- 접기 트리거의 왼쪽 가장자리로부터의 거리 (픽셀)
 local WAIT_TIME         = 0.15    -- 호버 대기 시간 (초)
 local MOUSE_POLL_INTERVAL = 0.05  -- 마우스 위치 확인 간격 (초)
 ```

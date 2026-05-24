@@ -41,8 +41,8 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 1. 在網址列輸入 `chrome://flags/#vertical-tabs`
 2. 將 **Vertical tabs** 改為 **Enabled**
-3. 點擊 **Relaunch** 重啟瀏覽器
-4. 重啟後，右鍵分頁列頂部空白處即可看到選項
+3. 點擊 **Relaunch** 重新啟動瀏覽器
+4. 重新啟動後，右鍵分頁列頂部空白處即可看到選項
 
 ## 安裝步驟
 
@@ -193,7 +193,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 
 ## 工作原理
 
-1. `eventtap` 在 Chrome 為前景時攔截 `Cmd+S`（方案 1 和 3）
+1. 當 Chrome 處於前景運作時，`eventtap` 會攔截 `Cmd+S`（方案 1 和 3）
 2. 滑鼠位置輪詢器（50Hz）偵測左邊緣懸停和離開（方案 2 和 3）
 3. 兩個觸發器都呼叫 `toggleSidebar()`：
    - 透過 `hs.axuielement.applicationElement()` 取得 Chrome 的 AX 根元素

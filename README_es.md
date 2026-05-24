@@ -5,7 +5,7 @@
 <h1 align="center">Chrome-Vertical-Tab-Sidebar-Toggle</h1>
 
 <p align="center">
-  <strong>Un script de Hammerspoon que alterna la barra lateral de pestañas verticales nativa de Chrome mediante la API de Accesibilidad de macOS</strong><br>
+  <strong>Un script de Hammerspoon para mostrar/ocultar la barra lateral de pestañas verticales nativa de Chrome mediante la API de Accesibilidad de macOS</strong><br>
   Atajo de teclado, activación por borde de la pantalla, o ambos — tú decides.
 </p>
 
@@ -17,7 +17,7 @@
 
 ## Características
 
-Chrome tiene una barra lateral de pestañas verticales integrada, pero no hay atajo de teclado para alternarla. Este script lo soluciona con dos versiones:
+Chrome tiene una barra lateral de pestañas verticales integrada, pero no hay atajo de teclado para mostrarla u ocultarla. Este script lo soluciona con dos versiones:
 
 - **`init.lua`** — soporta tres esquemas seleccionables (teclado / borde de la pantalla / ambos)
 - **`init-keyboard-only.lua`** — solo atajo de teclado, sin detección de ratón
@@ -82,7 +82,7 @@ Edita la variable `SCHEME` en la parte superior de `init.lua` para elegir un mod
 
 | Esquema | Valor | Activadores |
 |---------|-------|-------------|
-| Solo teclado | `1` | `Cmd+S` alterna la barra lateral |
+| Solo teclado | `1` | `Cmd+S` muestra/oculta la barra lateral |
 | Solo borde de la pantalla | `2` | Pasar el ratón por el borde izquierdo de la pantalla para expandir, mover más allá de 380px para contraer |
 | Teclado + Ratón | `3` | Ambos activadores activos (por defecto) |
 
@@ -96,7 +96,7 @@ Cuando Chrome no es la aplicación en primer plano, todos los activadores se des
 
 | Activador | Acción | Esquema |
 |-----------|--------|---------|
-| `Cmd+S` | Alternar barra lateral | 1 & 3 |
+| `Cmd+S` | Mostrar/ocultar barra lateral | 1 & 3 |
 | Ratón en el borde izquierdo (0-2px) durante 0.15s | Expandir barra lateral | 2 & 3 |
 | Ratón se mueve más allá de 380px del borde izquierdo | Contraer barra lateral | 2 & 3 |
 
