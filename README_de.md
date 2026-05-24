@@ -195,10 +195,10 @@ Nach dem Bearbeiten laden Sie die Hammerspoon-Konfiguration neu, um die Änderun
 
 1. Ein `eventtap` fängt `Cmd+S` ab, wenn Chrome im Vordergrund ist (Schemata 1 & 3)
 2. Ein Mauspositions-Poller (50Hz) erkennt das Schweben am linken Rand und das Verlassen (Schemata 2 & 3)
-3. Beide Auslöser rufen die Funktion `toggleSidebar()` auf. Diese Funktion:
-   - Ruft das AX-Wurzelelement von Chrome über `hs.axuielement.applicationElement()` ab
-   - Sucht in den Fenstern nach einer Schaltfläche mit `AXDescription`, die zu "Expand Tabs" oder "Collapse Tabs" passt
-   - Ruft `performAction("AXPress")` auf der gefundenen Schaltfläche auf
+3. Beide Auslöser rufen die Funktion `toggleSidebar()` auf. Diese Funktion dient dazu:
+   - das AX-Wurzelelement von Chrome über `hs.axuielement.applicationElement()` abzurufen
+   - in den Fenstern nach einer Schaltfläche mit `AXDescription` zu suchen, die zu "Expand Tabs" oder "Collapse Tabs" passt
+   - `performAction("AXPress")` auf der gefundenen Schaltfläche aufzurufen
 4. Ein Watchdog erkennt, wenn der Mauspoller abstürzt, und startet ihn automatisch neu (Schemata 2 & 3)
 5. Verzögerungszeiten (Grace Periods) verhindern Fehlauslöser beim App-Wechsel
 
