@@ -196,9 +196,9 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 1. `eventtap` が Chrome が最前面のときに `Cmd+S` を傍受(スキーム 1 & 3)
 2. マウス位置監視タイマー (50Hz) が左端のホバーと退出を検出 (スキーム 2 & 3)
 3. 両方のトリガーが `toggleSidebar()` を呼び出し、以下の処理を実行します:
-   - `hs.axuielement.applicationElement()` で Chrome の AX ルート要素を取得
-   - ウィンドウ内で `AXDescription` が "Expand Tabs" または "Collapse Tabs" に一致するボタンを検索
-   - 見つかったボタンに `performAction("AXPress")` を呼び出し
+   - `hs.axuielement.applicationElement()` による Chrome の AX ルート要素の取得
+   - ウィンドウ内からの `AXDescription` が "Expand Tabs" または "Collapse Tabs" に一致するボタンの検索
+   - 検出されたボタンへの `performAction("AXPress")` の実行
 4. ウォッチドッグがマウス位置監視タイマーの異常を検出し自動再起動 (スキーム 2 & 3)
 5. 誤動作防止のための猶予時間（Grace Period）による、アプリ切り替え時の誤トリガー防止
 

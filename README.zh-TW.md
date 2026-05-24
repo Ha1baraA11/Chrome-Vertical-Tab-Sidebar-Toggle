@@ -200,7 +200,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
    - 在視窗中搜尋 `AXDescription` 符合「Expand Tabs」或「Collapse Tabs」的按鈕
    - 呼叫 `performAction("AXPress")` 點擊按鈕
 4. Watchdog 機制偵測滑鼠輪詢器是否異常並自動重新啟動（方案 2 和 3）
-5. 防誤觸緩衝時間防止應用切換時的誤觸發
+5. 防誤觸緩衝時間防止應用程式切換時的誤觸發
 
 ## 檔案說明
 
