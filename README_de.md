@@ -167,7 +167,7 @@ keycodes.map["space"]   -- Leertaste
 keycodes.map["f1"]      -- F1
 ```
 
-Vollständige Tastennamenliste:Führen Sie `hs.keycodes.map` in der Hammerspoon-Konsole aus.
+Vollständige Tastennamenliste: Führen Sie `hs.keycodes.map` in der Hammerspoon-Konsole aus.
 
 ### Beispiele
 

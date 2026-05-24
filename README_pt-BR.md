@@ -167,7 +167,7 @@ keycodes.map["space"]   -- Espaço
 keycodes.map["f1"]      -- F1
 ```
 
-Lista completa de nomes de teclas:execute `hs.keycodes.map` no console do Hammerspoon.
+Lista completa de nomes de teclas: execute `hs.keycodes.map` no console do Hammerspoon.
 
 ### Exemplos
 

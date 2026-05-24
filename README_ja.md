@@ -70,7 +70,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
    - システム設定 → プライバシーとセキュリティ → アクセシビリティ
    - Hammerspoon を追加して有効にする
 
-4. Hammerspoon 設定をリロードしてください (メニューバーのアイコン → 設定をリロードをクリック)
+4. Hammerspoon 設定をリロードしてください (メニューバーのアイコン → 「Reload Config」をクリック)
 
 5. (オプション) Hammerspoon をログインアイテムに追加して自動起動を設定してください:
    - システム設定 → 一般 → ログインアイテム
@@ -200,7 +200,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
    - ウィンドウ内で `AXDescription` が "Expand Tabs" または "Collapse Tabs" に一致するボタンを検索
    - 見つかったボタンに `performAction("AXPress")` を呼び出し
 4. ウォッチドッグがマウス位置監視タイマーの異常を検出し自動再起動 (スキーム 2 & 3)
-5. 誤動作防止のための猶予時間 (Grace Period) がアプリ切替時の誤トリガーを防止
+5. 誤動作防止のための猶予時間（Grace Period）による、アプリ切り替え時の誤トリガー防止
 
 ## ファイル
 

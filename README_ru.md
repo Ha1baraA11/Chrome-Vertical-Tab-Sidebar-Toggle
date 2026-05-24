@@ -167,7 +167,7 @@ keycodes.map["space"]   -- Пробел
 keycodes.map["f1"]      -- F1
 ```
 
-Полный список имён клавиш:выполните `hs.keycodes.map` в консоли Hammerspoon.
+Полный список имён клавиш: выполните `hs.keycodes.map` в консоли Hammerspoon.
 
 ### Примеры
 

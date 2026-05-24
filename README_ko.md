@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 1. 주소창에 `chrome://flags/#vertical-tabs`를 입력하세요
 2. **Vertical tabs**를 **Enabled**로 변경하세요
 3. **Relaunch**를 클릭하여 Chrome을 재시작하세요
-4. 재시작 후 탭 표시줄의 빈 공간을 우클릭하면 옵션을 볼 수 있습니다
+4. 재시작 후 탭 표시줄의 빈 공간을 우클릭하여 옵션을 확인하세요
 
 ## 설치
 
@@ -200,7 +200,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
    - 윈도우에서 `AXDescription`이 "Expand Tabs" 또는 "Collapse Tabs"와 일치하는 버튼을 검색
    - 찾은 버튼에 `performAction("AXPress")`를 호출
 4. 워치독이 마우스 폴러의 오류를 감지하고 자동 재시작 (스킴 2 & 3)
-5. 오작동 방지 유예 시간이 앱 전환 시 잘못된 트리거를 방지
+5. 오작동 방지 유예 시간을 통한 앱 전환 시 오작동 방지
 
 ## 파일
 
