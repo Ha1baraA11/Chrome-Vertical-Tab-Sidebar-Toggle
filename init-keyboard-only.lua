@@ -37,6 +37,14 @@ local alert     = hs.alert
 local APP_NAME = "Google Chrome"
 local DEBUG    = true
 
+-- Sidebar toggle button labels (lower-case), matched against AXTitle/AXDescription.
+-- Chrome localizes these, so include every locale you use.
+local SIDEBAR_LABELS = {
+    "expand tabs", "collapse tabs",   -- English
+    "展開分頁", "收合分頁",             -- Traditional Chinese
+    "展开标签页", "收起标签页",         -- Simplified Chinese
+}
+
 -- ----------------------------------------------------------
 -- State
 -- ----------------------------------------------------------
@@ -56,15 +64,16 @@ local toggleSidebar, setGracePeriod, findSidebarButton
 -- ----------------------------------------------------------
 findSidebarButton = function(axElement, depth)
     depth = depth or 0
-    if not axElement or depth > 15 then return nil end
+    if not axElement or depth > 25 then return nil end
 
     local role = axElement:attributeValue("AXRole")
     if role == "AXButton" then
         local title = string.lower(tostring(axElement:attributeValue("AXTitle") or ""))
         local desc  = string.lower(tostring(axElement:attributeValue("AXDescription") or ""))
-        if title == "expand tabs" or title == "collapse tabs"
-            or desc == "expand tabs" or desc == "collapse tabs" then
-            return axElement
+        for _, label in ipairs(SIDEBAR_LABELS) do
+            if title == label or desc == label then
+                return axElement
+            end
         end
     end
 

@@ -49,6 +49,14 @@ local WAIT_TIME           = 0.15    -- seconds to hover before triggering
 local MOUSE_POLL_INTERVAL = 0.05    -- seconds between mouse position checks
 local DEBUG               = true
 
+-- Sidebar toggle button labels (lower-case), matched against AXTitle/AXDescription.
+-- Chrome localizes these, so include every locale you use.
+local SIDEBAR_LABELS = {
+    "expand tabs", "collapse tabs",   -- English
+    "展開分頁", "收合分頁",             -- Traditional Chinese
+    "展开标签页", "收起标签页",         -- Simplified Chinese
+}
+
 local USE_KEYBOARD = (SCHEME == 1 or SCHEME == 3)
 local USE_MOUSE    = (SCHEME == 2 or SCHEME == 3)
 
@@ -76,15 +84,16 @@ local mousePollCallback, setGracePeriod, findSidebarButton
 -- ----------------------------------------------------------
 findSidebarButton = function(axElement, depth)
     depth = depth or 0
-    if not axElement or depth > 15 then return nil end
+    if not axElement or depth > 25 then return nil end
 
     local role = axElement:attributeValue("AXRole")
     if role == "AXButton" then
         local title = string.lower(tostring(axElement:attributeValue("AXTitle") or ""))
         local desc  = string.lower(tostring(axElement:attributeValue("AXDescription") or ""))
-        if title == "expand tabs" or title == "collapse tabs"
-            or desc == "expand tabs" or desc == "collapse tabs" then
-            return axElement
+        for _, label in ipairs(SIDEBAR_LABELS) do
+            if title == label or desc == label then
+                return axElement
+            end
         end
     end
 
@@ -144,7 +153,7 @@ end
 -- ----------------------------------------------------------
 areServicesRunning = function()
     local keyTapRunning      = not USE_KEYBOARD or (keyTap and keyTap:isEnabled())
-    local mousePollerRunning = not USE_MOUSE or (mousePoller and mousePoller:isRunning())
+    local mousePollerRunning = not USE_MOUSE or (mousePoller and mousePoller:running())
     return keyTapRunning, mousePollerRunning
 end
 
@@ -161,7 +170,7 @@ startServices = function()
     end
 
     if USE_MOUSE then
-        local mousePollerRunning = mousePoller and mousePoller:isRunning()
+        local mousePollerRunning = mousePoller and mousePoller:running()
         if not mousePollerRunning then
             createMousePoller()
             if mousePoller then
@@ -177,7 +186,7 @@ stopServices = function()
         keyTap:stop()
         log("KeyTap stopped")
     end
-    if USE_MOUSE and mousePoller and mousePoller:isRunning() then
+    if USE_MOUSE and mousePoller and mousePoller:running() then
         mousePoller:stop()
         log("MousePoller stopped")
     end
@@ -415,16 +424,25 @@ hs.hotkey.bind({"cmd", "alt"}, "B", function()
 
     local results = {}
     local function dumpButtons(el, depth)
-        if not el or depth > 15 then return end
-        local role = el:attributeValue("AXRole")
+        if not el or depth > 25 then return end
+        local role = tostring(el:attributeValue("AXRole") or "")
         local title = el:attributeValue("AXTitle")
         local desc = el:attributeValue("AXDescription")
         local help = el:attributeValue("AXHelp")
 
-        if role == "AXButton" then
+        -- Report any element that is a button OR mentions "tab"/"sidebar"
+        -- anywhere in its title/desc/help (case-insensitive).
+        local hay = string.lower(
+            tostring(title or "") .. "|" ..
+            tostring(desc or "")  .. "|" ..
+            tostring(help or "")
+        )
+        local mentionsTab = hay:find("tab", 1, true) or hay:find("sidebar", 1, true)
+
+        if role == "AXButton" or mentionsTab then
             table.insert(results, string.format(
-                "Title: [%s] | Desc: [%s] | Help: [%s]",
-                tostring(title), tostring(desc), tostring(help)
+                "depth=%d Role: [%s] | Title: [%s] | Desc: [%s] | Help: [%s]",
+                depth, role, tostring(title), tostring(desc), tostring(help)
             ))
         end
 
@@ -440,12 +458,12 @@ hs.hotkey.bind({"cmd", "alt"}, "B", function()
         dumpButtons(win, 0)
     end
 
-    print("=== Chrome AX Buttons ===")
+    print("=== Chrome AX Buttons / tab-related elements ===")
     for i, r in ipairs(results) do
         print(i .. ". " .. r)
     end
-    print("=== Total: " .. #results .. " buttons ===")
-    alert.show("Found " .. #results .. " buttons, check Console", 3)
+    print("=== Total: " .. #results .. " elements ===")
+    alert.show("Found " .. #results .. " elements, check Console", 3)
 end)
 
 hs.hotkey.bind({"cmd", "alt"}, "R", function()
