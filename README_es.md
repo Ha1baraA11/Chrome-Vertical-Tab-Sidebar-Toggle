@@ -28,6 +28,25 @@ Funciona recorriendo el árbol de accesibilidad de Chrome (`AXUIElement`) para e
 
 https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
+## Configuraciones regionales de Chrome compatibles
+
+El script compara las etiquetas de los botones de la barra lateral en el árbol de accesibilidad de Chrome. Funciona directamente con estas configuraciones regionales:
+
+| Idioma | Configuración regional | Mostrar pestañas | Ocultar pestañas |
+|--------|------------------------|------------------|------------------|
+| Inglés | `en` | Expand tabs | Collapse tabs |
+| Chino tradicional | `zh-TW` / `zh-HK` | 展開分頁 | 收合分頁 |
+| Chino simplificado | `zh-CN` | 展开标签页 | 收起标签页 |
+| Japonés | `ja` | タブを開く | タブを閉じる |
+| Coreano | `ko` | 탭 펼치기 | 탭 접기 |
+| Alemán | `de` | Tabs maximieren | Tabs minimieren |
+| Español | `es` | Mostrar pestañas | Ocultar pestañas |
+| Francés | `fr` | Développer les onglets | Réduire les onglets |
+| Portugués (Brasil) | `pt-BR` | Mostrar guias | Ocultar guias |
+| Ruso | `ru` | Развернуть вкладки | Свернуть вкладки |
+
+Para añadir otro idioma, busca la etiqueta del botón en tu configuración regional de Chrome y añádela a la tabla `SIDEBAR_LABELS` en `init.lua`.
+
 ## Requisitos
 
 - macOS 13+

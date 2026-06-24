@@ -28,6 +28,25 @@ It works by traversing Chrome's Accessibility tree (`AXUIElement`) to find the "
 
 https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
+## Supported Chrome Locales
+
+The script matches sidebar button labels from Chrome's accessibility tree. It works out of the box with any of these locales:
+
+| Language | Locale | Expand Tabs | Collapse Tabs |
+|----------|--------|-------------|---------------|
+| English | `en` | Expand tabs | Collapse tabs |
+| Traditional Chinese | `zh-TW` / `zh-HK` | 展開分頁 | 收合分頁 |
+| Simplified Chinese | `zh-CN` | 展开标签页 | 收起标签页 |
+| Japanese | `ja` | タブを開く | タブを閉じる |
+| Korean | `ko` | 탭 펼치기 | 탭 접기 |
+| German | `de` | Tabs maximieren | Tabs minimieren |
+| Spanish | `es` | Mostrar pestañas | Ocultar pestañas |
+| French | `fr` | Développer les onglets | Réduire les onglets |
+| Portuguese (Brazil) | `pt-BR` | Mostrar guias | Ocultar guias |
+| Russian | `ru` | Развернуть вкладки | Свернуть вкладки |
+
+To add another language, find the button label in your Chrome locale and append it to the `SIDEBAR_LABELS` table in `init.lua`.
+
 ## Requirements
 
 - macOS 13+

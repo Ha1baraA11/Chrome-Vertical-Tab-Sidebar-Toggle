@@ -28,6 +28,25 @@ Funciona percorrendo a árvore de acessibilidade do Chrome (`AXUIElement`) para 
 
 https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
+## Localidades do Chrome compatíveis
+
+O script compara os rótulos dos botões da barra lateral na árvore de acessibilidade do Chrome. Funciona imediatamente com estas localidades:
+
+| Idioma | Localidade | Mostrar guias | Ocultar guias |
+|--------|------------|---------------|---------------|
+| Inglês | `en` | Expand tabs | Collapse tabs |
+| Chinês tradicional | `zh-TW` / `zh-HK` | 展開分頁 | 收合分頁 |
+| Chinês simplificado | `zh-CN` | 展开标签页 | 收起标签页 |
+| Japonês | `ja` | タブを開く | タブを閉じる |
+| Coreano | `ko` | 탭 펼치기 | 탭 접기 |
+| Alemão | `de` | Tabs maximieren | Tabs minimieren |
+| Espanhol | `es` | Mostrar pestañas | Ocultar pestañas |
+| Francês | `fr` | Développer les onglets | Réduire les onglets |
+| Português (Brasil) | `pt-BR` | Mostrar guias | Ocultar guias |
+| Russo | `ru` | Развернуть вкладки | Свернуть вкладки |
+
+Para adicionar outro idioma, encontre o rótulo do botão na sua localidade do Chrome e adicione-o à tabela `SIDEBAR_LABELS` em `init.lua`.
+
 ## Requisitos
 
 - macOS 13+

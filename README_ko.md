@@ -28,6 +28,25 @@ Chrome의 손쉬운 사용 트리(`AXUIElement`)를 탐색하여 "Expand Tabs" /
 
 https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
+## 지원 Chrome 로케일
+
+스크립트는 Chrome의 손쉬운 사용 트리에 있는 사이드바 버튼 레이블을 매칭하여 작동합니다. 다음 로케일에서 바로 사용할 수 있습니다:
+
+| 언어 | 로케일 | 탭 펼치기 | 탭 접기 |
+|------|--------|----------|---------|
+| 영어 | `en` | Expand tabs | Collapse tabs |
+| 번체 중국어 | `zh-TW` / `zh-HK` | 展開分頁 | 收合分頁 |
+| 간체 중국어 | `zh-CN` | 展开标签页 | 收起标签页 |
+| 일본어 | `ja` | タブを開く | タブを閉じる |
+| 한국어 | `ko` | 탭 펼치기 | 탭 접기 |
+| 독일어 | `de` | Tabs maximieren | Tabs minimieren |
+| 스페인어 | `es` | Mostrar pestañas | Ocultar pestañas |
+| 프랑스어 | `fr` | Développer les onglets | Réduire les onglets |
+| 포르투갈어 (브라질) | `pt-BR` | Mostrar guias | Ocultar guias |
+| 러시아어 | `ru` | Развернуть вкладки | Свернуть вкладки |
+
+다른 언어를 추가하려면 사용 중인 Chrome 로케일의 버튼 레이블을 확인하여 `init.lua`의 `SIDEBAR_LABELS` 테이블에 추가하세요.
+
 ## 요구 사항
 
 - macOS 13+

@@ -40,9 +40,16 @@ local DEBUG    = true
 -- Sidebar toggle button labels (lower-case), matched against AXTitle/AXDescription.
 -- Chrome localizes these, so include every locale you use.
 local SIDEBAR_LABELS = {
-    "expand tabs", "collapse tabs",   -- English
-    "展開分頁", "收合分頁",             -- Traditional Chinese
-    "展开标签页", "收起标签页",         -- Simplified Chinese
+    "expand tabs", "collapse tabs",             -- English
+    "展開分頁", "收合分頁",                       -- Traditional Chinese
+    "展开标签页", "收起标签页",                   -- Simplified Chinese
+    "タブを開く", "タブを閉じる",                 -- Japanese
+    "탭 펼치기", "탭 접기",                       -- Korean
+    "tabs maximieren", "tabs minimieren",       -- German
+    "mostrar pestañas", "ocultar pestañas",     -- Spanish
+    "développer les onglets", "réduire les onglets", -- French
+    "mostrar guias", "ocultar guias",           -- Portuguese (Brazil)
+    "развернуть вкладки", "свернуть вкладки",   -- Russian
 }
 
 -- ----------------------------------------------------------

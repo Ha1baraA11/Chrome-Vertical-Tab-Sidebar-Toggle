@@ -28,6 +28,25 @@ Fonctionne en parcourant l'arbre d'accessibilité de Chrome (`AXUIElement`) pour
 
 https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
+## Paramètres régionaux Chrome pris en charge
+
+Le script compare les libellés des boutons de la barre latérale dans l'arbre d'accessibilité de Chrome. Il fonctionne directement avec ces paramètres régionaux :
+
+| Langue | Paramètre régional | Développer les onglets | Réduire les onglets |
+|--------|---------------------|------------------------|---------------------|
+| Anglais | `en` | Expand tabs | Collapse tabs |
+| Chinois traditionnel | `zh-TW` / `zh-HK` | 展開分頁 | 收合分頁 |
+| Chinois simplifié | `zh-CN` | 展开标签页 | 收起标签页 |
+| Japonais | `ja` | タブを開く | タブを閉じる |
+| Coréen | `ko` | 탭 펼치기 | 탭 접기 |
+| Allemand | `de` | Tabs maximieren | Tabs minimieren |
+| Espagnol | `es` | Mostrar pestañas | Ocultar pestañas |
+| Français | `fr` | Développer les onglets | Réduire les onglets |
+| Portugais (Brésil) | `pt-BR` | Mostrar guias | Ocultar guias |
+| Russe | `ru` | Развернуть вкладки | Свернуть вкладки |
+
+Pour ajouter une autre langue, trouvez le libellé du bouton dans votre paramètre régional Chrome et ajoutez-le au tableau `SIDEBAR_LABELS` dans `init.lua`.
+
 ## Prérequis
 
 - macOS 13+

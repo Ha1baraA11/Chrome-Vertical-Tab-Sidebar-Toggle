@@ -28,6 +28,25 @@ Es funktioniert, indem es Chromes Accessibility-Baum (`AXUIElement`) durchsucht,
 
 https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
+## Unterstützte Chrome-Gebietsschemas
+
+Das Skript gleicht die Beschriftungen der Schaltflächen in Chromes Accessibility-Baum ab. Es funktioniert sofort mit diesen Gebietsschemas:
+
+| Sprache | Gebietsschema | Tabs maximieren | Tabs minimieren |
+|---------|---------------|-----------------|-----------------|
+| Englisch | `en` | Expand tabs | Collapse tabs |
+| Traditionelles Chinesisch | `zh-TW` / `zh-HK` | 展開分頁 | 收合分頁 |
+| Vereinfachtes Chinesisch | `zh-CN` | 展开标签页 | 收起标签页 |
+| Japanisch | `ja` | タブを開く | タブを閉じる |
+| Koreanisch | `ko` | 탭 펼치기 | 탭 접기 |
+| Deutsch | `de` | Tabs maximieren | Tabs minimieren |
+| Spanisch | `es` | Mostrar pestañas | Ocultar pestañas |
+| Französisch | `fr` | Développer les onglets | Réduire les onglets |
+| Portugiesisch (Brasilien) | `pt-BR` | Mostrar guias | Ocultar guias |
+| Russisch | `ru` | Развернуть вкладки | Свернуть вкладки |
+
+Um eine weitere Sprache hinzuzufügen, suchen Sie die Schaltflächenbeschriftung in Ihrem Chrome-Gebietsschema und fügen Sie sie zur Tabelle `SIDEBAR_LABELS` in `init.lua` hinzu.
+
 ## Anforderungen
 
 - macOS 13+
