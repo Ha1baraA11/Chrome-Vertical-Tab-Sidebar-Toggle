@@ -238,7 +238,7 @@ createKeyTap = function()
         local frontApp = app.frontmostApplication()
         if frontApp and frontApp:name() == APP_NAME and not _G.inSwitchingGracePeriod then
             local now = timer.secondsSinceEpoch()
-            if (now - _G.mouseLastHeartbeat) > 5 then
+            if USE_MOUSE and (now - _G.mouseLastHeartbeat) > 5 then
                 log("[Watchdog] MousePoller dead, rebuilding...")
                 restartServices()
             end
