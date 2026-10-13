@@ -47,6 +47,8 @@ El script compara las etiquetas de los botones de la barra lateral en el árbol 
 
 Para añadir otro idioma, busca la etiqueta del botón en tu configuración regional de Chrome y añádela a la tabla `SIDEBAR_LABELS` en `init.lua`.
 
+Chrome puede añadir a la etiqueta de accesibilidad una indicación del atajo de teclado entre paréntesis, por ejemplo, `Expand Tabs (⇧⌘L)`. La comparación acepta la etiqueta configurada con o sin ese sufijo.
+
 ## Requisitos
 
 - macOS 13+
@@ -216,7 +218,7 @@ Después de editar, recarga la configuración de Hammerspoon para aplicar los ca
 2. Un sondeo de posición del ratón (50Hz) detecta el paso por el borde izquierdo y la salida (esquemas 2 & 3)
 3. Ambos activadores llaman a `toggleSidebar()`, que:
    - Obtiene el elemento raíz AX de Chrome mediante `hs.axuielement.applicationElement()`
-   - Busca en las ventanas un botón con `AXDescription` que coincida con "Expand Tabs" o "Collapse Tabs"
+   - Busca en las ventanas un botón cuyo `AXTitle` o `AXDescription` coincida con una etiqueta configurada, con o sin un sufijo de atajo de teclado entre paréntesis
    - Llama a `performAction("AXPress")` en el botón encontrado
 4. Un temporizador de vigilancia (watchdog) detecta si el sondeo del ratón falla y lo reinicia automáticamente (esquemas 2 & 3)
 5. Períodos de tolerancia previenen activaciones falsas durante el cambio de aplicaciones

@@ -47,6 +47,8 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 如需添加其他语言，找到你所用 Chrome 语言环境下的按钮标签，追加到 `init.lua` 的 `SIDEBAR_LABELS` 表中即可。
 
+Chrome 可能会在辅助功能标签后附加快捷键提示，例如 `Expand Tabs (⇧⌘L)`。匹配器同时接受原始标签和带括号快捷键后缀的标签。
+
 ## 系统要求
 
 - macOS 13+
@@ -216,7 +218,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 2. 鼠标位置轮询器（50Hz）检测左边缘悬停和离开（方案 2 和 3）
 3. 两个触发器都调用 `toggleSidebar()`：
    - 通过 `hs.axuielement.applicationElement()` 获取 Chrome 的 AX 根元素
-   - 在窗口中搜索 `AXDescription` 匹配 "Expand Tabs" 或 "Collapse Tabs" 的按钮
+   - 在窗口中搜索 `AXTitle` 或 `AXDescription` 与配置标签匹配的按钮，支持标签后附加括号快捷键提示
    - 调用 `performAction("AXPress")` 点击按钮
 4. Watchdog 机制检测鼠标轮询器是否异常并自动重启（方案 2 和 3）
 5. 防误触缓冲时间防止应用切换时的误触发

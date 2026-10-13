@@ -47,6 +47,8 @@ Le script compare les libellés des boutons de la barre latérale dans l'arbre d
 
 Pour ajouter une autre langue, trouvez le libellé du bouton dans votre paramètre régional Chrome et ajoutez-le au tableau `SIDEBAR_LABELS` dans `init.lua`.
 
+Chrome peut ajouter à la fin du libellé d’accessibilité un raccourci clavier entre parenthèses, par exemple `Expand Tabs (⇧⌘L)`. La comparaison accepte le libellé configuré avec ou sans ce suffixe.
+
 ## Prérequis
 
 - macOS 13+
@@ -216,7 +218,7 @@ Après modification, rechargez la configuration Hammerspoon pour appliquer les c
 2. Un sondage de position de la souris (50Hz) détecte le survol du bord gauche et la sortie (schémas 2 & 3)
 3. Les deux déclencheurs appellent `toggleSidebar()` qui :
    - Obtient l'élément racine AX de Chrome via `hs.axuielement.applicationElement()`
-   - Recherche dans les fenêtres un bouton avec `AXDescription` correspondant à "Expand Tabs" ou "Collapse Tabs"
+   - Recherche dans les fenêtres un bouton dont `AXTitle` ou `AXDescription` correspond à un libellé configuré, avec ou sans raccourci clavier entre parenthèses à la fin
    - Appelle `performAction("AXPress")` sur le bouton trouvé
 4. Un mécanisme de « watchdog » détecte si le sondage de la souris échoue et le redémarre automatiquement (schémas 2 & 3)
 5. Un délai de tolérance empêche les déclenchements intempestifs lors du changement d'applications

@@ -47,6 +47,8 @@ Das Skript gleicht die Beschriftungen der Schaltflächen in Chromes Accessibilit
 
 Um eine weitere Sprache hinzuzufügen, suchen Sie die Schaltflächenbeschriftung in Ihrem Chrome-Gebietsschema und fügen Sie sie zur Tabelle `SIDEBAR_LABELS` in `init.lua` hinzu.
 
+Chrome kann an die Barrierefreiheitsbeschriftung einen Tastenkürzelhinweis in Klammern anhängen, zum Beispiel `Expand Tabs (⇧⌘L)`. Der Abgleich akzeptiert die konfigurierte Beschriftung mit oder ohne diesen Zusatz.
+
 ## Anforderungen
 
 - macOS 13+
@@ -216,7 +218,7 @@ Nach dem Bearbeiten laden Sie die Hammerspoon-Konfiguration neu, um die Änderun
 2. Ein Mauspositions-Poller (50Hz) erkennt das Schweben am linken Rand und das Verlassen (Schemata 2 & 3)
 3. Beide Auslöser rufen die Funktion `toggleSidebar()` auf. Diese Funktion dient dazu:
    - das AX-Wurzelelement von Chrome über `hs.axuielement.applicationElement()` abzurufen
-   - in den Fenstern nach einer Schaltfläche mit `AXDescription` zu suchen, die zu "Expand Tabs" oder "Collapse Tabs" passt
+   - in den Fenstern nach einer Schaltfläche zu suchen, deren `AXTitle` oder `AXDescription` zu einer konfigurierten Beschriftung passt; ein Tastenkürzelhinweis in Klammern am Ende ist zulässig
    - `performAction("AXPress")` auf der gefundenen Schaltfläche aufzurufen
 4. Ein Watchdog erkennt, wenn der Mauspoller abstürzt, und startet ihn automatisch neu (Schemata 2 & 3)
 5. Verzögerungszeiten (Grace Periods) verhindern Fehlauslöser beim App-Wechsel
