@@ -50,7 +50,8 @@ local MOUSE_POLL_INTERVAL = 0.05    -- seconds between mouse position checks
 local DEBUG               = true
 
 -- Sidebar toggle button labels (lower-case), matched against AXTitle/AXDescription.
--- Chrome localizes these, so include every locale you use.
+-- Chrome localizes these, so include every locale you use. Chrome may append a
+-- keyboard shortcut, e.g. "Expand Tabs (⇧⌘L)"; matchesSidebarLabel accepts it.
 local SIDEBAR_LABELS = {
     "expand tabs", "collapse tabs",             -- English
     "展開分頁", "收合分頁",                       -- Traditional Chinese
@@ -63,6 +64,14 @@ local SIDEBAR_LABELS = {
     "mostrar guias", "ocultar guias",           -- Portuguese (Brazil)
     "развернуть вкладки", "свернуть вкладки",   -- Russian
 }
+
+local function matchesSidebarLabel(value, label)
+    value = string.lower(tostring(value or ""))
+    if value == label then return true end
+
+    return value:sub(1, #label) == label
+        and value:sub(#label + 1):match("^%s+%(") ~= nil
+end
 
 local USE_KEYBOARD = (SCHEME == 1 or SCHEME == 3)
 local USE_MOUSE    = (SCHEME == 2 or SCHEME == 3)
@@ -98,7 +107,7 @@ findSidebarButton = function(axElement, depth)
         local title = string.lower(tostring(axElement:attributeValue("AXTitle") or ""))
         local desc  = string.lower(tostring(axElement:attributeValue("AXDescription") or ""))
         for _, label in ipairs(SIDEBAR_LABELS) do
-            if title == label or desc == label then
+            if matchesSidebarLabel(title, label) or matchesSidebarLabel(desc, label) then
                 return axElement
             end
         end

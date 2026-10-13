@@ -47,6 +47,8 @@ O script compara os rótulos dos botões da barra lateral na árvore de acessibi
 
 Para adicionar outro idioma, encontre o rótulo do botão na sua localidade do Chrome e adicione-o à tabela `SIDEBAR_LABELS` em `init.lua`.
 
+O Chrome pode acrescentar à etiqueta de acessibilidade um atalho de teclado entre parênteses, por exemplo, `Expand Tabs (⇧⌘L)`. A comparação aceita a etiqueta configurada com ou sem esse sufixo.
+
 ## Requisitos
 
 - macOS 13+
@@ -216,7 +218,7 @@ Após editar, recarregue a configuração do Hammerspoon para aplicar.
 2. Um monitor de posição do mouse (50Hz) detecta a passagem pela borda esquerda e a saída (esquemas 2 & 3)
 3. Ambos os gatilhos chamam `toggleSidebar()`, que:
    - Obtém o elemento raiz AX do Chrome via `hs.axuielement.applicationElement()`
-   - Procura nas janelas um botão com `AXDescription` correspondendo a "Expand Tabs" ou "Collapse Tabs"
+   - Procura nas janelas um botão cujo `AXTitle` ou `AXDescription` corresponda a uma etiqueta configurada, com ou sem um sufixo de atalho entre parênteses
    - Chama `performAction("AXPress")` no botão encontrado
 4. Um watchdog detecta se o monitor do mouse falha e reinicia automaticamente (esquemas 2 & 3)
 5. Períodos de tolerância previnem gatilhos falsos durante a troca de aplicativos

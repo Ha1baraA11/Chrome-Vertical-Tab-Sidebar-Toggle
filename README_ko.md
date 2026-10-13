@@ -47,6 +47,8 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 다른 언어를 추가하려면 사용 중인 Chrome 로케일의 버튼 레이블을 확인하여 `init.lua`의 `SIDEBAR_LABELS` 테이블에 추가하세요.
 
+Chrome은 접근성 레이블 뒤에 키보드 단축키를 괄호로 덧붙일 수 있습니다(예: `Expand Tabs (⇧⌘L)`). 매칭은 원래 레이블과 괄호로 된 단축키 접미사가 붙은 레이블을 모두 허용합니다.
+
 ## 요구 사항
 
 - macOS 13+
@@ -216,7 +218,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 2. 화면 왼쪽 가장자리 호버 및 이탈 감지 (스킴 2 & 3)
 3. 두 트리거 모두 `toggleSidebar()` 호출:
    - `hs.axuielement.applicationElement()`로 Chrome의 AX 루트 요소 가져오기
-   - 윈도우에서 `AXDescription`이 "Expand Tabs" 또는 "Collapse Tabs"와 일치하는 버튼 검색하기
+   - 윈도우에서 설정된 레이블과 `AXTitle` 또는 `AXDescription`이 일치하는 버튼 검색하기(끝의 괄호형 단축키 힌트도 허용)
    - 찾은 버튼에 `performAction("AXPress")` 호출하기
 4. 마우스 폴러 오류 감지 및 자동 재시작 (스킴 2 & 3)
 5. 앱 전환 시 오작동 방지 유예 시간을 통한 오작동 방지

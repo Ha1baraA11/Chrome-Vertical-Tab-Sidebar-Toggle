@@ -47,6 +47,8 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 他の言語を追加するには、お使いの Chrome ロケールのボタンラベルを確認し、`init.lua` の `SIDEBAR_LABELS` テーブルに追加してください。
 
+Chrome はアクセシビリティラベルの末尾にキーボードショートカットを追加することがあります（例: `Expand Tabs (⇧⌘L)`）。照合では、元のラベルと括弧付きショートカットが付いたラベルの両方を受け付けます。
+
 ## 必要要件
 
 - macOS 13+
@@ -216,7 +218,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 2. マウス位置監視タイマー (50Hz) が左端のホバーと退出を検出 (スキーム 2 & 3)
 3. 両方のトリガーによる `toggleSidebar()` の呼び出し（以下の処理を実行）:
    - `hs.axuielement.applicationElement()` による Chrome の AX ルート要素の取得
-   - ウィンドウ内からの `AXDescription` が "Expand Tabs" または "Collapse Tabs" に一致するボタンの検索
+   - ウィンドウ内から、設定済みラベルに `AXTitle` または `AXDescription` が一致するボタンを検索（末尾の括弧付きショートカットも許容）
    - 検出されたボタンへの `performAction("AXPress")` の実行
 4. ウォッチドッグによるマウス位置監視タイマーの異常検出および自動再起動 (スキーム 2 & 3)
 5. 誤動作防止のための猶予時間（Grace Period）による、アプリ切り替え時の誤トリガー防止

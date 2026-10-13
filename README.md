@@ -47,6 +47,8 @@ The script matches sidebar button labels from Chrome's accessibility tree. It wo
 
 To add another language, find the button label in your Chrome locale and append it to the `SIDEBAR_LABELS` table in `init.lua`.
 
+Chrome may append a keyboard shortcut to the accessibility label, for example `Expand Tabs (⇧⌘L)`. The matcher accepts the configured label with or without a trailing parenthesized shortcut.
+
 ## Requirements
 
 - macOS 13+
@@ -216,7 +218,7 @@ After editing, reload Hammerspoon config to apply.
 2. A mouse position poller (50Hz) detects left-edge hover and exit (schemes 2 & 3)
 3. Both triggers call `toggleSidebar()` which:
    - Gets Chrome's `AXUIElement` root via `hs.axuielement.applicationElement()`
-   - Searches windows for a button with `AXDescription` matching "Expand Tabs" or "Collapse Tabs"
+   - Searches windows for a button whose `AXTitle` or `AXDescription` matches a configured label, with or without a trailing parenthesized keyboard shortcut
    - Calls `performAction("AXPress")` on the found button
 4. A watchdog detects if the mouse poller dies and auto-restarts (schemes 2 & 3)
 5. Grace periods prevent false triggers during app switching

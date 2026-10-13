@@ -47,6 +47,8 @@ https://github.com/user-attachments/assets/bcf2a76a-8028-4b63-bc8a-f0b9e1178a25
 
 如需新增其他語言，找到你所用 Chrome 語言環境下的按鈕標籤，加入 `init.lua` 的 `SIDEBAR_LABELS` 表中即可。
 
+Chrome 可能會在輔助使用標籤後附加快速鍵提示，例如 `Expand Tabs (⇧⌘L)`。匹配器接受原始標籤，也接受附有括號快速鍵後綴的標籤。
+
 ## 系統要求
 
 - macOS 13+
@@ -216,7 +218,7 @@ if flags.cmd and not flags.ctrl and not flags.alt and flags.shift
 2. 滑鼠位置輪詢器（50Hz）偵測左邊緣懸停和離開（方案 2 和 3）
 3. 兩個觸發器都呼叫 `toggleSidebar()`：
    - 透過 `hs.axuielement.applicationElement()` 取得 Chrome 的 AX 根元素
-   - 在視窗中搜尋 `AXDescription` 符合「Expand Tabs」或「Collapse Tabs」的按鈕
+   - 在視窗中搜尋 `AXTitle` 或 `AXDescription` 符合設定標籤的按鈕，也接受標籤後附加括號快速鍵提示
    - 呼叫 `performAction("AXPress")` 點擊按鈕
 4. Watchdog 機制偵測滑鼠輪詢器是否異常並自動重新啟動（方案 2 和 3）
 5. 防誤觸緩衝時間防止應用程式切換時的誤觸發
